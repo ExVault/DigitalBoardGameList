@@ -1,0 +1,942 @@
+﻿- Name: Caverna
+  BggId: 102794
+  PlatformIds:
+    GooglePlay: com.digidiced.cavrelease
+    AppStore: 6480056103
+    Steam: 3216750
+
+- Name: Gaia Project
+  BggId: 220308
+  PlatformIds:
+    GooglePlay: com.digidiced.gxprelease
+    AppStore: 1572302140
+    Steam: 1516400
+
+- Name: Terra Mystica
+  BggId: 120677
+  PlatformIds:
+    GooglePlay: com.digidiced.txmrelease
+    AppStore: 1162168455
+    Steam: 628900
+  Dlcs: [ Fire & Ice ]
+
+- Name: The Castles of Burgundy
+  BggId: 84876
+  PlatformIds:
+    GooglePlay: com.digidiced.bvbrelease
+    AppStore: 1410742242
+    Steam: 903040
+
+- Name: Viticulture
+  BggId: 183394
+  PlatformIds:
+    GooglePlay: com.digidiced.vxcrelease
+    AppStore: 1467248737
+    Steam: 1325800
+
+- Name: Indian Summer
+  BggId: 233678
+  PlatformIds:
+    GooglePlay: com.digidiced.insrelease
+    AppStore: 1410742147
+    Steam: 900380
+
+- Name: Cottage Garden
+  BggId: 204027
+  PlatformIds:
+    GooglePlay: com.digidiced.cxgrelease
+    AppStore: 1267856477
+    Steam: 716090
+
+- Name: Chai
+  BggId: 253185
+  PlatformIds:
+    GooglePlay: com.digidiced.chirelease
+    AppStore: 1631802998
+    Steam: 2094380
+
+- Name: Stockpile
+  BggId: 161614
+  PlatformIds:
+    GooglePlay: com.digidiced.sxprelease
+    AppStore: 1410674432
+    Steam: 900370
+
+- Name: Bohnanza The Duel
+  BggId: 205867
+  PlatformIds:
+    GooglePlay: com.digidiced.bddrelease
+    AppStore: 1280919052
+    Steam: 716100
+
+- Name: Root
+  BggId: 237182
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.root
+    AppStore: 1439262206
+    Steam: 965580
+    Switch: root-switch
+
+- Name: Ark Nova
+  BggId: 342942
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.arknova
+    AppStore: 6449233549
+    Steam: 2438990
+
+- Name: "Dune: Imperium"
+  BggId: 316554
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.dune
+    AppStore: 1575414319
+    Steam: 1689500
+    Xbox: dune-imperium/9mvp2r9302vp
+
+- Name: The Isle of Cats
+  BggId: 281259
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.theisleofcats
+    AppStore: 6449233575
+    Steam: 2438980
+
+- Name: Cascadia
+  BggId: 295947
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.cascadia
+    AppStore: 6449233571
+    Steam: 2438970
+
+- Name: Clank!
+  BggId: 201808
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.clank
+    AppStore: 1580629864
+    Steam: 1722870
+
+- Name: Everdell
+  BggId: 199792
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.everdell
+    AppStore: 1580626436
+    Steam: 1722840
+    Switch: everdell-switch
+
+- Name: Welcome To Everdell
+  BggId: 375852
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.mylileverdell
+    AppStore: 6459537401
+    Steam: 2553410
+
+- Name: Munchkin
+  BggId: 1927
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.munchkin
+    AppStore: 1580629479
+    Steam: 1722860
+
+- Name: Wings of Glory
+  BggId: 107148
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.wingsofglory
+    AppStore: 1586020504
+    Steam: 965620
+
+- Name: The Fox in the Forest
+  BggId: 221965
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.thefoxintheforest
+    AppStore: 1578000887
+    Steam: 1729050
+
+- Name: Sagrada
+  BggId: 199561
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.sagrada
+    AppStore: 1439244077
+    Steam: 965590
+    Switch: sagrada-switch
+
+- Name: Yellow & Yangtze
+  BggId: 244114
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.yellow
+    AppStore: 1439244350
+    Steam: 965610
+
+- Name: Raiders of the North Sea
+  BggId: 170042
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.raiders
+    AppStore: 1439244088
+    Steam: 965600
+    Switch: raiders-of-the-north-sea
+
+- Name: Lotus
+  Developer: Dire Wolf # (-Digital) keep for consistency
+  BggId: 198525
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.lotus
+    AppStore: 1270821305
+
+- Name: "Lanterns: The Harvest Festival"
+  Developer: Dire Wolf # (-Digital) keep for consistency
+  BggId: 160851
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.lanterns
+    AppStore: 1155269699
+
+- Name: Concordia
+  BggId: 124361
+  PlatformIds:
+    GooglePlay: com.acram.Concordia
+    AppStore: 1536417255
+    Steam: 1450330
+    GOG: concordia_digital_edition
+    Switch: concordia-digital-edition
+
+- Name: Stone Age
+  BggId: 34635
+  PlatformIds:
+    GooglePlay: com.acram.StoneAge
+    AppStore: 6445834434
+    Steam: 2177570
+    Switch: stone-age-digital-edition-switch
+
+- Name: Charterstone
+  BggId: 197376
+  PlatformIds:
+    GooglePlay: com.acram.Charterstone
+    AppStore: 1457338857
+    Steam: 1046660
+    GOG: charterstone_digital_edition
+    Switch: charterstone-digital-edition-switch
+
+- Name: Istanbul
+  BggId: 148949
+  PlatformIds:
+    GooglePlay: com.acram.Istanbul
+    AppStore: 1296756606
+    Steam: 943410
+    Switch: istanbul-digital-edition-switch
+
+- Name: Eight-Minute Empire
+  BggId: 131366
+  PlatformIds:
+    GooglePlay: com.acram.EightMinuteEmpire
+    AppStore: 1164894268
+    Steam: 656590
+    Switch: eight-minute-empire-complete-edition-switch
+
+- Name: Tokaido
+  BggId: 123540
+  PlatformIds:
+    GooglePlay: com.funforgedigital.tokaido
+    AppStore: 1215230801
+    Steam: 648750
+
+- Name: Steam
+  BggId: 27833
+  PlatformIds:
+    GooglePlay: com.acram.steam
+    AppStore: 1016459121
+    Steam: 595930
+    Switch: steam-rails-to-riches-complete-edition-switch
+
+- Name: Set a Watch
+  BggId: 228855
+  PlatformIds:
+    GooglePlay: com.acram.SetAWatch
+    AppStore: 6483861915
+    Steam: 3493430
+
+- Name: Unmatched
+  BggId: 274637
+  PlatformIds:
+    GooglePlay: com.acram.Unmatched
+    AppStore: 1573747138
+    Steam: 1677980
+    Switch: unmatched-digital-edition-switch
+
+- Name: Terraforming Mars
+  BggId: 167791
+  PlatformIds:
+    GooglePlay: com.asmodeedigital.terraformingmars
+    AppStore: 1353471030
+    Steam: 800270
+    GOG: terraforming_mars
+    EGS: terraforming-mars-18c3ad
+
+- Name: Carcassonne
+  BggId: 822
+  PlatformIds:
+    GooglePlay: com.asmodeedigital.carcassonne
+    AppStore: 1199912736
+    Steam: 598810
+    GOG: carcassonne_tiles_tactics
+    EGS: carcassonne
+    Switch: carcassonne-switch
+
+- Name: A Game of Thrones
+  BggId: 103343
+  PlatformIds:
+    GooglePlay: com.direwolfdigital.iron
+    AppStore: 1483771411
+    Steam: 1075190
+    GOG: a_game_of_thrones_the_board_game
+    EGS: a-game-of-thrones-5858a3
+
+- Name: Love Letter
+  BggId: 129622
+  PlatformIds:
+    GooglePlay: com.nomadgames.loveletterdev
+    AppStore: 1412772177
+    Steam: 926520
+
+- Name: King and Assassins
+  BggId: 147930
+  PlatformIds:
+    GooglePlay: com.asmodeedigital.kingandassassins
+    AppStore: 1207338475
+    Steam: 603460
+
+- Name: Isle of Skye
+  BggId: 176494
+  PlatformIds:
+    GooglePlay: com.digidiced.ixsrelease
+    AppStore: 1326879265
+    Steam: 873980
+
+- Name: Jaipur
+  BggId: 54043
+  PlatformIds:
+    GooglePlay: com.meepletouch.jaipur
+    AppStore: 1193262249
+
+- Name: Mysterium
+  BggId: 181304
+  PlatformIds:
+    GooglePlay: com.asmodeedigital.mysterium
+    AppStore: 1170135668
+    Steam: 556180
+
+- Name: "Agricola: All Creatures Big and Small"
+  BggId: 119890
+  PlatformIds:
+    GooglePlay: com.digidiced.abvrelease
+    AppStore: 1118398079
+    Steam: 528180
+
+- Name: "Le Havre: The Inland Port"
+  BggId: 129051
+  PlatformIds:
+    GooglePlay: com.digidiced.lhbrelease
+    AppStore: 1044671796
+    Steam: 511820
+
+- Name: Pathfinder Adventures
+  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
+  BggId: 271060
+  PlatformIds:
+    GooglePlay: net.obsidian.pacg1
+    AppStore: 966333863
+    Steam: 480640
+
+- Name: Patchwork
+  BggId: 163412
+  PlatformIds:
+    GooglePlay: com.digidiced.pxwrelease
+    AppStore: 1075851197
+    Steam: 528250
+
+- Name: XenoShyft
+  BggId: 159109
+  PlatformIds:
+    GooglePlay: com.cmon.Xenoshyft
+    AppStore: 981289341
+    Steam: 429390
+
+- Name: Small World
+  BggId: 40692
+  PlatformIds:
+    GooglePlay: com.daysofwonder.smallworld2
+    AppStore: 364165557
+    Steam: 235620
+
+- Name: Splendor
+  BggId: 148228
+  PlatformIds:
+    Steam: 376680
+
+- Name: Gloomhaven
+  BggId: 174430
+  PlatformIds:
+    Steam: 780290
+    GOG: gloomhaven
+    EGS: gloomhaven-92f741
+    Playstation: EP4917-PPSA08116_00-GLOOMHAVENGOLDB1
+    Xbox: gloomhaven/9NCRD23Z3L08
+    Switch: gloomhaven-switch
+
+- Name: Frosthaven
+  BggId: 295770
+  PlatformIds:
+    Steam: 2347080
+    EGS: frosthaven-0aa6b6
+
+- Name: Scythe
+  BggId: 169786
+  PlatformIds:
+    GooglePlay: com.asmodeedigital.scythe
+    AppStore: 1482645966
+    Steam: 718560
+    GOG: scythe_digital_edition
+
+- Name: Blood Rage
+  BggId: 170216
+  PlatformIds:
+    Steam: 1015930
+
+- Name: Spirit Island
+  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
+  BggId: 162886
+  PlatformIds:
+    GooglePlay: com.handelabra.SpiritIsland
+    AppStore: 1501321205
+    Steam: 1236720
+
+- Name: One Deck Dungeon
+  BggId: 179275
+  PlatformIds:
+    GooglePlay: com.handelabra.OneDeckDungeon
+    AppStore: 1380151253
+    Steam: 770100
+    Switch: one-deck-dungeon-switch
+
+- Name: One Deck Galaxy
+  BggId: 256713
+  PlatformIds:
+    GooglePlay: com.handelabra.OneDeckGalaxy
+    Steam: 1974300
+
+- Name: Aeon's End
+  BggId: 191189
+  PlatformIds:
+    GooglePlay: com.handelabra.AeonsEnd
+    AppStore: 1476090287
+    Steam: 1063580
+
+- Name: Sentinels of Earth-Prime
+  BggId: 220609
+  PlatformIds:
+    GooglePlay: com.handelabra.SentinelsOfEarthPrime
+    AppStore: 1623878241
+    Steam: 1974290
+
+- Name: Sentinels of the Multiverse
+  BggId: 102652
+  PlatformIds:
+    GooglePlay: com.handelabra.Sentinels
+    AppStore: 923772792
+    Steam: 337150
+
+- Name: Bottom of the 9th
+  BggId: 166286
+  PlatformIds:
+    GooglePlay: com.handelabra.Bot9
+    AppStore: 1205620577
+    Steam: 705020
+
+- Name: Mystic Vale
+  BggId: 194607
+  PlatformIds:
+    GooglePlay: com.nomadgames.mysticvale
+    AppStore: 1456125882
+    Steam: 908070
+    Switch: mystic-vale-switch
+
+- Name: "Talisman: 4th Edition"
+  PriceTemplate: Free to Play or Paid\nDifferent editions
+  BggId: 27627
+  PlatformIds:
+    GooglePlay: com.nomadgames.talisman
+    AppStore: 1312840735
+    Steam: 247000
+    GOG: talisman_digital_edition
+    Playstation: EP2581-CUSA05920_00-0055885834704481
+    Xbox: Talisman-Digital-Edition/9PDWDPMWXNDX
+    Switch: talisman-digital-edition-switch
+
+- Name: "Talisman: 5th Edition"
+  BggId: 415550
+  PlatformIds:
+    Steam: 908060
+    Playstation: UP2719-CUSA56071_00-TALISMANDIGITAL5
+    Xbox: talisman-digital-5th-edition/9N3KN2WLLFBT
+
+- Name: Fury of Dracula
+  BggId: 181279
+  PlatformIds:
+    GooglePlay: com.nomadgames.furyofdracula
+    AppStore: 1499802612
+    Steam: 958530
+    Playstation: EP2866-CUSA29805_00-FURYOFDRACULASIE
+    Xbox: fury-of-dracula-digital-edition/9PLCD46H74QQ
+
+- Name: Smash Up
+  BggId: 122522
+  PlatformIds:
+    GooglePlay: com.asmodeedigital.smashup
+    AppStore: 1195821282
+    Steam: 446540
+
+- Name: Cat Lady
+  BggId: 228504
+  PlatformIds:
+    GooglePlay: com.nomadgames.catlady
+    AppStore: 1316015291
+    Steam: 869690
+
+- Name: Race for the Galaxy
+  BggId: 28143
+  PlatformIds:
+    GooglePlay: com.templegatesgames.RaceAndroid
+    AppStore: 1190675052
+    Steam: 579940
+
+- Name: Roll for the Galaxy
+  BggId: 132531
+  PlatformIds:
+    GooglePlay: com.templegatesgames.RollAndroid
+    AppStore: 1324815218
+    Steam: 893840
+
+- Name: Shards of Infinity
+  BggId: 244115
+  PlatformIds:
+    GooglePlay: com.templegatesgames.ShardsAndroid
+    AppStore: 1450361296
+    Steam: 1008800
+
+- Name: Dominion
+  BggId: 36218
+  PlatformIds:
+    GooglePlay: com.templegatesgames.DominionAndroid
+    AppStore: 1476461085
+    Steam: 1131620
+
+- Name: Lords of Waterdeep
+  BggId: 110327
+  PlatformIds:
+    GooglePlay: com.playdekgames.waterdeep
+    AppStore: 648019675
+    Steam: 644390
+
+- Name: Twilight Struggle
+  BggId: 12333
+  PlatformIds:
+    GooglePlay: com.playdekgames.twilightstruggle
+    AppStore: 942766453
+    Steam: 406290
+
+- Name: "Twilight Struggle: Red Sea"
+  BggId: 300192
+  PlatformIds:
+    GooglePlay: com.playdekgames.redsea
+    AppStore: 6444841677
+    Steam: 1276130
+
+- Name: "Ascension: Deckbuilding Game"
+  BggId: 69789
+  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
+  PlatformIds:
+    GooglePlay: com.playdekgames.android.Ascension
+    AppStore: 441838733
+    Steam: 320430
+
+- Name: "Labyrinth: The War on Terror"
+  BggId: 62227
+  PlatformIds:
+    GooglePlay: com.playdekgames.labyrinth
+    AppStore: 1438485859
+    Steam: 931950
+
+- Name: Fort Sumter
+  BggId: 229956
+  PlatformIds:
+    GooglePlay: com.playdekgames.fortsumter
+    AppStore: 1457799708
+    Steam: 1041940
+
+- Name: Fluxx
+  BggId: 258
+  PlatformIds:
+    GooglePlay: com.playdekgames.fluxx
+    AppStore: 561319376
+  Dlcs: [ Zombie Fluxx, Creeper Pack ]
+
+- Name: Neuroshima Hex
+  BggId: 21241
+  PlatformIds:
+    GooglePlay: com.bdc.nh
+    AppStore: 391297152
+    Steam: 2324150
+
+- Name: Tides of Time
+  BggId: 176229
+  PlatformIds:
+    GooglePlay: pl.portalgames.tidesoftime
+    AppStore: 1437742131
+
+- Name: Power Grid
+  BggId: 2651
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.funkenschlag
+    AppStore: 1434690170
+    Steam: 2983910
+
+- Name: "Eclipse: New Dawn for the Galaxy"
+  BggId: 72125
+  PlatformIds:
+    GooglePlay: air.de.brettspielwelt.eclipseapp
+    AppStore: 620439479
+
+- Name: "Eclipse: Second Dawn for the Galaxy"
+  BggId: 246900
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.eclipseapp2nd
+    AppStore: 1472324985
+    Steam: 3290350
+
+- Name: Cartographers
+  BggId: 263918
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.cartographers
+    AppStore: 1515991485
+    Steam: 2977360
+
+- Name: Brilliant
+  BggId: 437273
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.brilliant
+    AppStore: 6749324464
+
+- Name: Fishing
+  BggId: 419195
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.fischen
+    AppStore: 6745967764
+
+- Name: Next Station - Paris
+  BggId: 403116
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.nextparis
+    AppStore: 6739164495
+
+- Name: Next Station - London
+  BggId: 353545
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.nextlondon
+    AppStore: 6673907810
+
+- Name: Discordia
+  BggId: 360206
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.discordia
+    AppStore: 6458187997
+
+- Name: Super Mega Lucky Box
+  BggId: 341530
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.smlb
+    AppStore: 1659903900
+
+- Name: Fantasy Realms
+  BggId: 223040
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.fantasyrealms
+    AppStore: 1616457596
+
+- Name: Rustling Leaves
+  BggId: 313531
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.blaetterrauschen
+    AppStore: 1585351553
+
+- Name: Explorers
+  BggId: 330174
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.explorers
+    AppStore: 1576503781
+
+- Name: Cahoots
+  BggId: 246761
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.tippitoppi
+    AppStore: 1513657493
+
+- Name: Coffee Roaster
+  BggId: 196526
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.coffee_roaster
+    AppStore: 1475660279
+
+- Name: The Mind
+  BggId: 244992
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.themind
+    AppStore: 1436132672
+
+- Name: Friday
+  BggId: 43570
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.freitag
+    AppStore: 1222916942
+
+- Name: Ligretto
+  BggId: 943
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.ligretto
+    AppStore: 627380827
+
+- Name: Clever 4Ever
+  BggId: 366162
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.clever4ever
+    AppStore: 1645760885
+
+- Name: Clever Cubed
+  BggId: 316546
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.cleverhochdrei
+    AppStore: 1513812015
+
+- Name: Twice as Clever!
+  BggId: 269210
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.doppeltsoclever
+    AppStore: 1448698380
+
+- Name: That's Pretty Clever!
+  BggId: 244522
+  PlatformIds:
+    GooglePlay: de.brettspielwelt.ganzschoenclever
+    AppStore: 1411348057
+
+- Name: Wingspan
+  BggId: 266192
+  PlatformIds:
+    GooglePlay: com.MonsterCouch.Wingspan
+    AppStore: 1459520638
+    Steam: 1054490
+    GOG: wingspan
+    Playstation: EP2723-PPSA20773_00-WINGSPAN0EU0PS5D
+    Xbox: wingspan/9mt2kf9fkzm5
+    Switch: wingspan-switch
+
+- Name: Calico
+  BggId: 283155
+  PlatformIds:
+    GooglePlay: com.MonsterCouch.Calico
+    AppStore: 1634779760
+    Steam: 1993180
+    GOG: quilts_and_cats_of_calico
+    Playstation: EP2723-PPSA23883_00-CALICOPS50000000
+    Xbox: quilts-and-cats-of-calico/9P0LSZR1VVKR/0010
+    Switch: quilts-and-cats-of-calico-switch
+
+- Name: 7 Wonders
+  BggId: 68448
+  PlatformIds:
+    GooglePlay: com.rprod.sevenwonders
+    AppStore: 530090434
+  Dlcs: [ Cities, Leaders ]
+
+- Name: 7 Wonders Duel
+  BggId: 173346
+  PlatformIds:
+    GooglePlay: com.rprod.duel
+    AppStore: 1441651711
+
+- Name: Evolution
+  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
+  BggId: 155703
+  PlatformIds:
+    GooglePlay: com.northstargames.evolutiongame
+    AppStore: 1112610493
+    Steam: 469800
+    Switch: evolution-board-game-switch
+
+- Name: Oceans
+  BggId: 232414
+  PlatformIds:
+    GooglePlay: com.northstargames.oceans
+    AppStore: 1504190935
+    Steam: 1945310
+
+- Name: Nature
+  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
+  BggId: 330152
+  PlatformIds:
+    GooglePlay: com.northstargames.nature
+    AppStore: 6738703558
+    Steam: 1926610
+  Dlcs: [ Arctic Tundra, Jurassic, Flight ]
+
+- Name: Hero Realms
+  BggId: 198994
+  PlatformIds:
+    GooglePlay: com.whitewizardgames.herorealmsapp
+    AppStore: 1396367189
+    Steam: 1569700
+
+- Name: Through the Ages
+  BggId: 182028
+  PlatformIds:
+    GooglePlay: com.czechgames.tta
+    AppStore: 966245474
+    Steam: 758370
+    GOG: through_the_ages
+
+- Name: Galaxy Trucker
+  BggId: 31481
+  PlatformIds:
+    GooglePlay: com.czechgames.galaxytrucker
+    AppStore: 904013027
+    Steam: 870690
+    GOG: galaxy_trucker
+  Dlcs: [ Alien Technologies ]
+
+- Name: Codenames
+  BggId: 178900
+  PlatformIds:
+    GooglePlay: com.czechgames.codenamesdigital
+    AppStore: 1055650930
+
+- Name: Le Havre
+  BggId: 35677
+  PlatformIds:
+    AppStore: 517685886
+
+- Name: Maracaibo
+  BggId: 276025
+  PlatformIds:
+    GooglePlay: com.scatterbrainstudios.maracaibo
+    AppStore: 1518834089
+
+- Name: Bullfrogs
+  BggId: 149853
+  PlatformIds:
+    GooglePlay: com.DarkStride.Bullfrogs
+    Steam: 1589670
+
+- Name: Axis & Allies 1942
+  BggId: 41863
+  PlatformIds:
+    GooglePlay: com.beamdog.aao1942
+    AppStore: 1515382132
+    Steam: 898920
+    GOG: axis_allies_1942_online
+    
+    # Removed from Steam on 2026-06-01
+    #- Name: "Brass: Lancashire"
+    #  BggId: 28720
+    #  PlatformIds:
+    #    Steam: 677650
+
+# Removed from Steam on 2026-06-01
+#- Name: "Brass: Birmingham"
+#  BggId: 224517
+#  PlatformIds:
+#    Steam: 1287920
+
+- Name: Lorenzo il Magnifico
+  BggId: 203993
+  PlatformIds:
+    Steam: 1034540
+
+- Name: Barrage
+  BggId: 251247
+  PlatformIds:
+    Steam: 2879570
+
+- Name: Evergreen
+  BggId: 363307
+  PlatformIds:
+    GooglePlay: com.horriblegames.evergreen
+    AppStore: 6444831273
+    Steam: 2238070
+
+- Name: Similo
+  BggId: 268620
+  PlatformIds:
+    GooglePlay: com.horriblegames.similo
+    AppStore: 1512015829
+    Steam: 1387170
+
+- Name: Potion Explosion
+  BggId: 180974
+  PlatformIds:
+    GooglePlay: com.asmodeedigital.potionexplosion
+    AppStore: 1162628471
+    Steam: 788420
+
+- Name: Railroad Ink Challenge
+  BggId: 306881
+  PlatformIds:
+    GooglePlay: com.horriblegames.railroadink
+    AppStore: 1549914827
+    Steam: 1592740
+
+- Name: Dragon Castle
+  BggId: 232219
+  PlatformIds:
+    GooglePlay: com.horriblegames.dragoncastle
+    AppStore: 1460296044
+    Steam: 1074300
+
+- Name: Hive
+  BggId: 2655
+  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
+  PlatformIds:
+    GooglePlay: com.jb.hive.android
+    AppStore: 6747834729
+    Steam: 251210
+  Developer: Different developers
+  Publisher: Different developers
+
+- Name: Laser Chess
+  BggId: 91034
+  PlatformIds:
+    Steam: 312720
+
+- Name: Lost Cities
+  BggId: 50
+  PlatformIds:
+    Steam: 520680
+
+- Name: Tatsu
+  BggId: 181811
+  PlatformIds:
+    Steam: 445070
+
+- Name: Canvas
+  BggId: 290236
+  PlatformIds:
+    GooglePlay: hr.mipmap.canvas
+    AppStore: 6736427077
+    Steam: 3209240
+
+- Name: Roll Player
+  BggId: 169426
+  PlatformIds:
+    GooglePlay: hr.mipmap.rollplayer
+    AppStore: 1575755196
+    Steam: 1939940
+
+- Name: Point Salad
+  BggId: 274960
+  PlatformIds:
+    GooglePlay: hr.mipmap.pointsalad
+    AppStore: 6452678658
+    Steam: 2532360

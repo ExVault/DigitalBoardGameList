@@ -1,0 +1,114 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td {
+    /*line-height: 1.4;*/
+    padding: 2px;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+.col-left {
+    text-align: left;
+    white-space: nowrap;
+}
+
+img.game-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.platform-item {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.platform-item:not(:last-child)::after {
+    content: "/";
+    color: #888;
+    font-size: 24px;
+    margin: 0 8px;
+}
+
+.platform-item img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.last-update::before {
+    content: "";
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 5px;
+
+    background-color: currentColor;
+    border: 2px solid black;
+    border-radius: 50%;
+    /*border-radius: 2px;*/
+}
+
+.hover-hint {
+    cursor: help;
+    text-decoration: underline dotted;
+    text-underline-offset: 5px;
+}
+
+.tooltip-row::before {
+    content: "■";
+    margin-right: 6px;
+    color: black;
+    position: relative;
+    top: -1px;
+}
+
+.freshness-green::before {
+    color: #22c55e;
+}
+
+.freshness-yellow::before {
+    color: #eab308;
+}
+
+.freshness-orange::before {
+    color: #f97316;
+}
+
+.freshness-red::before {
+    color: #ef4444;
+}
+
+th[data-sort-arrow]::after {
+    content: attr(data-sort-arrow);
+    font-size: 14px;
+    color: black;
+    margin-left: 8px;
+    vertical-align: top;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
