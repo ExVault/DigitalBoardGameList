@@ -38,15 +38,15 @@ Log.Logger = new LoggerConfiguration()
 
 Log.Information("AppSettings: {Settings}", settings);
 
-var inputCatalog = GameCatalog.FromLocalYamlFile(settings.InputPath);
-if (!inputCatalog.VerifyUnique())
+var gameCatalog = GameCatalog.FromLocalYamlFile(settings.GameCatalogPath);
+if (!gameCatalog.VerifyUnique())
 {
-    throw new InvalidOperationException("Game input catalogue is not unique");
+    throw new InvalidOperationException("Game catalog is not unique");
 }
 
-Log.Information("Input catalog successfully loaded with {GameCount} games", inputCatalog.Games.Count);
+Log.Information("Game catalog successfully loaded with {GameCount} games", gameCatalog.Games.Count);
 
-var previousCatalog = PublishCatalog.FromLocalJsonFile(settings.OutputPath);
+var previousCatalog = PublishCatalog.FromLocalJsonFile(settings.PreviousCatalogPath);
 if (previousCatalog == null)
 {
     Log.Warning("No previous catalog loaded.");
@@ -56,22 +56,17 @@ else
     Log.Information("Previous catalog successfully loaded with {GameCount} games", previousCatalog.Games.Count);
 }
 
-var enrichment = new EnrichmentProcess(inputCatalog, previousCatalog, settings);
+var enrichment = new EnrichmentProcess(gameCatalog, previousCatalog, settings);
 
 var publishCatalog = await enrichment.RunAsync();
 
-var jsonOptions = new JsonSerializerOptions
-{
-    WriteIndented = true,
-    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-};
+var json = JsonSerializer.Serialize(publishCatalog.Games.OrderBy(d => d.Bgg.Rank), 
+    new JsonSerializerOptions
+    {
+        WriteIndented = true,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+    });
 
-var json = JsonSerializer.Serialize(publishCatalog.Games.OrderBy(d => d.Bgg.Rank), jsonOptions);
-
-var outputPath = settings.TestRun
-    ? Path.Combine(Path.GetDirectoryName(settings.OutputPath)!, "test_" + Path.GetFileName(settings.OutputPath))
-    : settings.OutputPath;
-
-File.WriteAllText(outputPath, json);
+File.WriteAllText(settings.OutputCatalogPath, json);
 
 Console.WriteLine("Done!");

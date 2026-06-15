@@ -7,32 +7,47 @@ public class AppSettings
 {
     public LogEventLevel LogLevel { get; }
 
-    public string InputPath { get; }
-    public string OutputPath { get; }
+    public string GameCatalogPath { get; }
+    public string OutputCatalogPath { get; }
+    public string? PreviousCatalogPath { get; }
     public string BggCsvPath { get; }
 
     public bool ProcessOnlyNewGames { get; }
     public bool ForceDlcUpdate { get; }
     public bool TestRun { get; }
 
-    private AppSettings(LogEventLevel logLevel, string inputPath, string outputPath, string bggCsvPath,
-        bool processOnlyNewGames, bool forceDlcUpdate, bool testRun)
+    private AppSettings(LogEventLevel logLevel, string gameCatalogPath, string outputCatalogPath, string? previousCatalogPath,
+        string bggCsvPath, bool processOnlyNewGames, bool forceDlcUpdate, bool testRun)
     {
         LogLevel = logLevel;
-        InputPath = inputPath;
-        OutputPath = outputPath;
+        GameCatalogPath = gameCatalogPath;
+        OutputCatalogPath = outputCatalogPath;
         BggCsvPath = bggCsvPath;
         ProcessOnlyNewGames = processOnlyNewGames;
         ForceDlcUpdate = forceDlcUpdate;
         TestRun = testRun;
+
+        if (string.IsNullOrEmpty(previousCatalogPath))
+        {
+            PreviousCatalogPath = null;
+        }
+        else if (previousCatalogPath.Equals(nameof(OutputCatalogPath), StringComparison.OrdinalIgnoreCase))
+        {
+            PreviousCatalogPath = outputCatalogPath;
+        }
+        else
+        {
+            PreviousCatalogPath = previousCatalogPath;
+        }
     }
 
     public static AppSettings FromConfig(IConfigurationRoot config)
     {
         return new AppSettings(
             logLevel: Enum.Parse<LogEventLevel>(GetRequiredString(nameof(LogLevel), config), ignoreCase: true),
-            inputPath: GetRequiredString(nameof(InputPath), config),
-            outputPath: GetRequiredString(nameof(OutputPath), config),
+            gameCatalogPath: GetRequiredString(nameof(GameCatalogPath), config),
+            outputCatalogPath: GetRequiredString(nameof(OutputCatalogPath), config),
+            previousCatalogPath: config[nameof(PreviousCatalogPath)],
             bggCsvPath: GetRequiredString(nameof(BggCsvPath), config),
             processOnlyNewGames: GetBoolOrDefault("OnlyNew", config),
             forceDlcUpdate: GetBoolOrDefault(nameof(ForceDlcUpdate), config),

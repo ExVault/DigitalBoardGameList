@@ -3,16 +3,41 @@ name: Build and deploy Pages
 on:
   workflow_dispatch:
     inputs:
+      
       logLevel:
         description: Log level
         required: true
-        default: Information
+        default: Verbose
         type: choice
         options:
           - Verbose
           - Debug
           - Information
           - Warning
+          - 
+      previousCatalogUrl:
+        description: Previous data.json URL. Leave empty for first run.
+        required: false
+        default: https://exvault.github.io/DigitalBoardGameList/data.json
+        type: string
+        
+      onlyNew:
+        description: Process only games missing from current data.json
+        required: true
+        default: false
+        type: boolean
+        
+      forceDlcUpdate:
+        description: Force DLC data update
+        required: true
+        default: false
+        type: boolean
+        
+      testRun:
+        description: Generate output data for the first game only
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -39,9 +64,37 @@ jobs:
       - name: Download BGG ranks CSV
         run: |
           mkdir -p _input
-          curl -L \
+          curl -fL \
             -o _input/boardgames_ranks.csv \
             "https://github.com/${{ github.repository }}/releases/download/data-input/boardgames_ranks.csv"
+          test -s _input/boardgames_ranks.csv
+
+      - name: Download previous catalog
+        env:
+          PREVIOUS_CATALOG_URL: ${{ inputs.previousCatalogUrl }}
+        run: |
+          mkdir -p _input
+
+          if [ -z "$PREVIOUS_CATALOG_URL" ]; then
+            echo "Previous catalog URL is empty. Treating this as first run."
+            exit 0
+          fi
+
+          http_status=$(curl -L -sS -w "%{http_code}" \
+            -o _input/previous-catalog.json \
+            "$PREVIOUS_CATALOG_URL" || true)
+
+          if [ "$http_status" = "200" ]; then
+            test -s _input/previous-catalog.json
+            echo "Previous catalog downloaded."
+          elif [ "$http_status" = "404" ]; then
+            rm -f _input/previous-catalog.json
+            echo "Previous catalog not found. Treating this as first run."
+          else
+            rm -f _input/previous-catalog.json
+            echo "Failed to download previous catalog. HTTP status: $http_status"
+            exit 1
+          fi
 
       - name: Prepare Pages site
         run: |
@@ -52,12 +105,13 @@ jobs:
         run: >
           dotnet run --configuration Release --project DigitalBoardGameList.csproj --
           LogLevel=${{ inputs.logLevel }}
-          InputPath=games.yaml
-          OutputPath=_site/data.json
+          GameCatalog=games.yaml
+          OutputCatalogPath=_site/data.json
+          PreviousCatalogPath=_input/previous-catalog.json
           BggCsvPath=_input/boardgames_ranks.csv
-          OnlyNew=false
-          ForceDlcUpdate=false
-          TestRun=false
+          OnlyNew=${{ inputs.onlyNew }}
+          ForceDlcUpdate=${{ inputs.forceDlcUpdate }}
+          TestRun=${{ inputs.testRun }}
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
