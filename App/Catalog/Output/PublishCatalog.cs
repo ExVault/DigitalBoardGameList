@@ -6,8 +6,11 @@ public class PublishCatalog : AbstractCatalog<GameDto>
     {
     }
 
-    public static PublishCatalog FromLocalJsonFile(string path)
+    public static PublishCatalog? FromLocalJsonFile(string path)
     {
+        if (!File.Exists(path))
+            return null;
+        
         return new PublishCatalog(CatalogLoader.FromLocalJsonFile<GameDto>(path));
     }
 }

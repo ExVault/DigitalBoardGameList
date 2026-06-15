@@ -47,8 +47,14 @@ if (!inputCatalog.VerifyUnique())
 Log.Information("Input catalog successfully loaded with {GameCount} games", inputCatalog.Games.Count);
 
 var previousCatalog = PublishCatalog.FromLocalJsonFile(settings.OutputPath);
-
-Log.Information("Previous catalog successfully loaded with {GameCount} games", previousCatalog.Games.Count);
+if (previousCatalog == null)
+{
+    Log.Warning("No previous catalog loaded.");
+}
+else
+{
+    Log.Information("Previous catalog successfully loaded with {GameCount} games", previousCatalog.Games.Count);
+}
 
 var enrichment = new EnrichmentProcess(inputCatalog, previousCatalog, settings);
 
