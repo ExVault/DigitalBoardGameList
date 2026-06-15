@@ -16,25 +16,25 @@ on:
           - Warning
           - 
       previousCatalogUrl:
-        description: Previous data.json URL. Leave empty for first run.
+        description: Previous catalog url
         required: false
         default: https://exvault.github.io/DigitalBoardGameList/data.json
         type: string
         
       onlyNew:
-        description: Process only games missing from current data.json
+        description: Only new
         required: true
         default: false
         type: boolean
         
       forceDlcUpdate:
-        description: Force DLC data update
+        description: Force DLC update
         required: true
         default: false
         type: boolean
         
       testRun:
-        description: Generate output data for the first game only
+        description: Test run
         required: true
         default: false
         type: boolean
@@ -105,7 +105,7 @@ jobs:
         run: >
           dotnet run --configuration Release --project DigitalBoardGameList.csproj --
           LogLevel=${{ inputs.logLevel }}
-          GameCatalog=games.yaml
+          GameCatalogPath=games.yaml
           OutputCatalogPath=_site/data.json
           PreviousCatalogPath=_input/previous-catalog.json
           BggCsvPath=_input/boardgames_ranks.csv
