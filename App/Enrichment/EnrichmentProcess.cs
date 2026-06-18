@@ -30,7 +30,7 @@ public class EnrichmentProcess
             new ItunesApi(RequestDelay.FromSeconds(0.5)),
             new SteamAppDetailsApi(RequestDelay.FromSeconds(1.5, 2)),
             //new SteamNewsApi(RequestDelay.FromSeconds(1, 1.5)),
-            new SteamDbPatchNotesRss(RequestDelay.FromSeconds(7, 10)) // Got 429 on 5-7
+            new SteamDbPatchNotesRss(RequestDelay.FromSeconds(9, 11)) // Got 429 on 7-10
         ];
     }
 

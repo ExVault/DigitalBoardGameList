@@ -193,7 +193,10 @@ function makePriceTd(game) {
     
     const prices = game.Prices;
 
-    if (prices.length === 0) return priceTd;
+    if (prices.length === 0) {
+        priceTd.textContent = "No data";
+        return priceTd;
+    }
 
     let max = prices[prices.length - 1].Price.Value;
 
@@ -371,7 +374,7 @@ function makeDeveloperTd(game) {
 
 function addFooter(data){
     const footer = document.getElementById("footer");
-    const publishDate = new Date(data.PublishDate);
-    const formatted = publishDate.toLocaleString("en-GB", { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false });
-    footer.textContent = `Total games: ${data.Games.length} · Last update: ${formatted}`;
+    const fmtDate = new Date(data.PublishDate)
+        .toLocaleString("en-GB", { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false });
+    footer.textContent = `Total games: ${data.Games.length} · Updated on: ${fmtDate}`;
 }
