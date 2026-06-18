@@ -1,7 +1,8 @@
-﻿tippy.setDefaultProps({
+tippy.setDefaultProps({
     theme: "light-border",
     allowHTML: true,
     animation: "scale",
+    placement: "top",
 });
 
 const NOW = new Date();
@@ -17,10 +18,16 @@ const PLATFORM_NAMES = [
     "Switch",
 ];
 
+const PLATFORM_ICONS_PATH = "./assets/platform_icons/";
+
 const PLATFORM_ICONS = initPlatformIcons(PLATFORM_NAMES);
 
-function initPlatformIcons(names, base = "./assets/platform_icons/", ext = ".svg") {
-    return Object.fromEntries(names.map(n => [n, `${base}${n.toLowerCase()}${ext}`]));
+function initPlatformIcons(names, ext = ".svg") {
+    return Object.fromEntries(names.map(n => [n, `${PLATFORM_ICONS_PATH}${n.toLowerCase()}${ext}`]));
+}
+
+function getIconForPlatform(platform) {
+    return PLATFORM_ICONS[platform] ?? PLATFORM_ICONS_PATH + "no_icon.svg";
 }
 
 let tableData = [];
@@ -31,7 +38,7 @@ const SORT_KEYS = {
     1: game => game.Name,
     2: game => game.Bgg.Rank,
     3: game => game.Urls.length,
-    4: game => game.Prices.length === 0 ? Infinity : game.Prices[0].Price,
+    4: game => game.Prices.length === 0 ? Infinity : game.Prices[0].Price.Value,
     5: game => game.LastUpdates.length === 0 ? "0000-00-00" : game.LastUpdates[0].LastUpdate,
     6: game => game.Dlcs ? game.Dlcs.length : 0,
     7: game => game.Developer ?? "",
@@ -88,9 +95,10 @@ initSortHandlers();
 
 fetch("data.json")
     .then(res => res.json())
-    .then(gameData => {
-        tableData = gameData;
-        renderTable(gameData);
+    .then(data => {
+        tableData = data.Games;
+        renderTable(data.Games);
+        addFooter(data)
     })
     .catch(err => {
         console.error("Failed to load data.json:", err);
@@ -167,20 +175,11 @@ function makePlatformLinksTd(game) {
         a.href = Url;
         a.target = "_blank";
         a.setAttribute("aria-label", `View on ${Platform}`);
-
-        let icon = PLATFORM_ICONS[Platform];
-
-        if (icon) {
-            const img = document.createElement("img");
-            img.src = icon;
-            img.alt = Platform;
-            a.appendChild(img);
-        } else {
-            const text = document.createElement("span");
-            text.textContent = Platform;
-            text.className = "platform-text";
-            a.appendChild(text);
-        }
+;
+        const img = document.createElement("img");
+        img.src = getIconForPlatform(Platform);
+        img.alt = Platform;
+        a.appendChild(img);
 
         wrapper.appendChild(a);
         td.appendChild(wrapper);
@@ -191,55 +190,75 @@ function makePlatformLinksTd(game) {
 
 function makePriceTd(game) {
     const priceTd = document.createElement("td");
-
-    if (game.PriceTemplate) {
-
-        let priceStr = game.PriceTemplate
-            .replace(/\{([^}]+)\}/g, (_, platform) => {
-                const price = game.Prices.find(p => p.Platform === platform)?.Price;
-                if (price == null) return "N/A";
-                return '$' + price;
-            });
-
-        const lines = priceStr.split("\\n");
-        lines.forEach((line, index) => {
-            priceTd.appendChild(document.createTextNode(line));
-            if (index < lines.length - 1) {
-                priceTd.appendChild(document.createElement("br"));
-            }
-        });
-
-        return priceTd;
-    }
-
+    
     const prices = game.Prices;
 
     if (prices.length === 0) return priceTd;
 
-    let max = prices[prices.length - 1].Price;
+    let max = prices[prices.length - 1].Price.Value;
 
     if (max === 0) {
-        priceTd.textContent = "Free to Play";
+        priceTd.textContent = "Free to play";
         return priceTd;
     }
+    
     if (prices.length === 1) {
-        priceTd.textContent = '$' + max;
-        return priceTd;
+        priceTd.appendChild(document.createTextNode('$' + max));
     }
+    else {
+        let min = prices[0].Price.Value;
+        let minStr = stringifyZero(min);
+        const span = document.createElement("span");
+        span.className = "hover-hint";
+        span.textContent = min === max ? `${minStr}` : `${minStr} - $${max}`;
 
-    let min = prices[0].Price;
+        const tippyInstance = tippy(span, {
+            content: prices
+                .map(({Platform, Price}) => makeTippyRow(Platform, stringifyZero(Price.Value)))
+                .join("")
+        });
+        tippyInstances.push(tippyInstance);
 
-    const span = document.createElement("span");
-    span.className = "hover-hint";
-    span.textContent = min === max ? `$${min}` : `$${min} - $${max}`;
-
-    const tippyInstance = tippy(span, {
-        content: prices.map(({Platform, Price}) => `$${Price} - ${Platform}`).join("<br>"),
-    });
-    tippyInstances.push(tippyInstance);
-
-    priceTd.appendChild(span);
+        priceTd.appendChild(span);
+    }
+    
+    appendPlatformSaleBadges(priceTd, game);
     return priceTd;
+}
+
+function stringifyZero(value) {
+    return value === 0 ? "Free to play" : '$' + value;
+}
+
+function makeTippyRow(platform, value){
+    return `<div class="tooltip-price-row"><img src="${getIconForPlatform(platform)}" class="tooltip-platform-icon" alt="${platform}" /> ${value}</div>`;
+}
+
+function appendPlatformSaleBadges(td, game) {
+    const discounted = game.Prices.filter(p => p.Price.DiscountPct > 0);
+    if (discounted.length === 0) return;
+
+    td.appendChild(document.createElement("br"));
+
+    const container = document.createElement("div");
+    container.className = "sale-badges-container";
+
+    for (const {Platform, Price} of discounted) {
+        const badge = document.createElement("span");
+        badge.className = "sale-badge";
+
+        const img = document.createElement("img");
+        img.src = getIconForPlatform(Platform);
+        img.alt = Platform;
+        img.className = "sale-badge-icon";
+        badge.appendChild(img);
+
+        const textNode = document.createTextNode(`-${Price.DiscountPct}%`);
+        badge.appendChild(textNode);
+
+        container.appendChild(badge);
+    }
+    td.appendChild(container);
 }
 
 function makeLastUpdateTd(game) {
@@ -264,8 +283,8 @@ function makeLastUpdateTd(game) {
 
     const tippyInstance = tippy(span, {
         content: lastUpdates
-            .map(({Platform, LastUpdate}) => `${elapsedTimeAsString(LastUpdate)} - ${Platform}`)
-            .join("<br>"),
+            .map(({Platform, LastUpdate}) => makeTippyRow(Platform, elapsedTimeAsString(LastUpdate)))
+            .join(""),
     });
     tippyInstances.push(tippyInstance);
 
@@ -288,12 +307,15 @@ function freshnessClass(date) {
 
 function elapsedTimeAsString(date) {
     const diffDays = dateDiffDays(NOW, new Date(date));
-    const diffMonths = Math.floor(diffDays / 30.44);
-    const diffYears = Math.floor(diffDays / 365.25);
-
     if (diffDays === 0) return "Today";
-    if (diffDays < 30) return diffDays <= 1 ? "1 day ago" : `${diffDays} days ago`;
-    if (diffMonths < 12) return diffMonths === 1 ? "1 month ago" : `${diffMonths} months ago`;
+    if (diffDays === 1) return "1 day ago";
+    if (diffDays <= 30) return `${diffDays} days ago`;
+    
+    const diffMonths = Math.floor(diffDays / 30.44);
+    if (diffMonths === 1) return "1 month ago";
+    if (diffMonths < 12) return `${diffMonths} months ago`;
+    
+    const diffYears = Math.floor(diffDays / 365.25);
     return diffYears === 1 ? "1 year ago" : `${diffYears} years ago`;
 }
 
@@ -345,4 +367,11 @@ function makeDeveloperTd(game) {
     td.appendChild(document.createTextNode(pub));
 
     return td;
+}
+
+function addFooter(data){
+    const footer = document.getElementById("footer");
+    const publishDate = new Date(data.PublishDate);
+    const formatted = publishDate.toLocaleString("en-GB", { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false });
+    footer.textContent = `Total games: ${data.Games.length} · Last update: ${formatted}`;
 }

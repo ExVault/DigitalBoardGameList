@@ -75,7 +75,7 @@
     GooglePlay: com.direwolfdigital.root
     AppStore: 1439262206
     Steam: 965580
-    Switch: root-switch
+    Switch: root
 
 - Name: Ark Nova
   BggId: 342942
@@ -119,7 +119,7 @@
     GooglePlay: com.direwolfdigital.everdell
     AppStore: 1580626436
     Steam: 1722840
-    Switch: everdell-switch
+    Switch: everdell
 
 - Name: Welcome To Everdell
   BggId: 375852
@@ -155,7 +155,7 @@
     GooglePlay: com.direwolfdigital.sagrada
     AppStore: 1439244077
     Steam: 965590
-    Switch: sagrada-switch
+    Switch: sagrada
 
 - Name: Yellow & Yangtze
   BggId: 244114
@@ -201,7 +201,7 @@
     GooglePlay: com.acram.StoneAge
     AppStore: 6445834434
     Steam: 2177570
-    Switch: stone-age-digital-edition-switch
+    Switch: stone-age-digital-edition
 
 - Name: Charterstone
   BggId: 197376
@@ -210,7 +210,7 @@
     AppStore: 1457338857
     Steam: 1046660
     GOG: charterstone_digital_edition
-    Switch: charterstone-digital-edition-switch
+    Switch: charterstone-digital-edition
 
 - Name: Istanbul
   BggId: 148949
@@ -218,7 +218,7 @@
     GooglePlay: com.acram.Istanbul
     AppStore: 1296756606
     Steam: 943410
-    Switch: istanbul-digital-edition-switch
+    Switch: istanbul-digital-edition
 
 - Name: Eight-Minute Empire
   BggId: 131366
@@ -226,7 +226,7 @@
     GooglePlay: com.acram.EightMinuteEmpire
     AppStore: 1164894268
     Steam: 656590
-    Switch: eight-minute-empire-complete-edition-switch
+    Switch: eight-minute-empire-complete-edition
 
 - Name: Tokaido
   BggId: 123540
@@ -241,7 +241,7 @@
     GooglePlay: com.acram.steam
     AppStore: 1016459121
     Steam: 595930
-    Switch: steam-rails-to-riches-complete-edition-switch
+    Switch: steam-rails-to-riches-complete-edition
 
 - Name: Set a Watch
   BggId: 228855
@@ -256,7 +256,7 @@
     GooglePlay: com.acram.Unmatched
     AppStore: 1573747138
     Steam: 1677980
-    Switch: unmatched-digital-edition-switch
+    Switch: unmatched-digital-edition
 
 - Name: Terraforming Mars
   BggId: 167791
@@ -275,7 +275,7 @@
     Steam: 598810
     GOG: carcassonne_tiles_tactics
     EGS: carcassonne
-    Switch: carcassonne-switch
+    Switch: carcassonne
 
 - Name: A Game of Thrones
   BggId: 103343
@@ -335,7 +335,6 @@
     Steam: 511820
 
 - Name: Pathfinder Adventures
-  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
   BggId: 271060
   PlatformIds:
     GooglePlay: net.obsidian.pacg1
@@ -376,7 +375,7 @@
     EGS: gloomhaven-92f741
     Playstation: EP4917-PPSA08116_00-GLOOMHAVENGOLDB1
     Xbox: gloomhaven/9NCRD23Z3L08
-    Switch: gloomhaven-switch
+    Switch: gloomhaven
 
 - Name: Frosthaven
   BggId: 295770
@@ -398,7 +397,6 @@
     Steam: 1015930
 
 - Name: Spirit Island
-  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
   BggId: 162886
   PlatformIds:
     GooglePlay: com.handelabra.SpiritIsland
@@ -411,7 +409,7 @@
     GooglePlay: com.handelabra.OneDeckDungeon
     AppStore: 1380151253
     Steam: 770100
-    Switch: one-deck-dungeon-switch
+    Switch: one-deck-dungeon
 
 - Name: One Deck Galaxy
   BggId: 256713
@@ -453,10 +451,9 @@
     GooglePlay: com.nomadgames.mysticvale
     AppStore: 1456125882
     Steam: 908070
-    Switch: mystic-vale-switch
+    Switch: mystic-vale
 
 - Name: "Talisman: 4th Edition"
-  PriceTemplate: Free to Play or Paid\nDifferent editions
   BggId: 27627
   PlatformIds:
     GooglePlay: com.nomadgames.talisman
@@ -465,7 +462,7 @@
     GOG: talisman_digital_edition
     Playstation: EP2581-CUSA05920_00-0055885834704481
     Xbox: Talisman-Digital-Edition/9PDWDPMWXNDX
-    Switch: talisman-digital-edition-switch
+    Switch: talisman-digital-edition
 
 - Name: "Talisman: 5th Edition"
   BggId: 415550
@@ -548,7 +545,6 @@
 
 - Name: "Ascension: Deckbuilding Game"
   BggId: 69789
-  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
   PlatformIds:
     GooglePlay: com.playdekgames.android.Ascension
     AppStore: 441838733
@@ -732,7 +728,7 @@
     GOG: wingspan
     Playstation: EP2723-PPSA20773_00-WINGSPAN0EU0PS5D
     Xbox: wingspan/9mt2kf9fkzm5
-    Switch: wingspan-switch
+    Switch: wingspan
 
 - Name: Calico
   BggId: 283155
@@ -743,7 +739,7 @@
     GOG: quilts_and_cats_of_calico
     Playstation: EP2723-PPSA23883_00-CALICOPS50000000
     Xbox: quilts-and-cats-of-calico/9P0LSZR1VVKR/0010
-    Switch: quilts-and-cats-of-calico-switch
+    Switch: quilts-and-cats-of-calico
 
 - Name: 7 Wonders
   BggId: 68448
@@ -759,13 +755,12 @@
     AppStore: 1441651711
 
 - Name: Evolution
-  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
   BggId: 155703
   PlatformIds:
     GooglePlay: com.northstargames.evolutiongame
     AppStore: 1112610493
     Steam: 469800
-    Switch: evolution-board-game-switch
+    Switch: evolution-board-game
 
 - Name: Oceans
   BggId: 232414
@@ -775,7 +770,6 @@
     Steam: 1945310
 
 - Name: Nature
-  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
   BggId: 330152
   PlatformIds:
     GooglePlay: com.northstargames.nature
@@ -837,7 +831,7 @@
     AppStore: 1515382132
     Steam: 898920
     GOG: axis_allies_1942_online
-    
+
     # Removed from Steam on 2026-06-01
     #- Name: "Brass: Lancashire"
     #  BggId: 28720
@@ -897,7 +891,6 @@
 
 - Name: Hive
   BggId: 2655
-  PriceTemplate: Free to Play on Mobile\n{Steam} on PC
   PlatformIds:
     GooglePlay: com.jb.hive.android
     AppStore: 6747834729
@@ -940,3 +933,27 @@
     GooglePlay: hr.mipmap.pointsalad
     AppStore: 6452678658
     Steam: 2532360
+
+- Name: Ticket to Ride
+  BggId: 9209
+  PlatformIds:
+    GooglePlay: com.marmalade.tickettoride
+    AppStore: 6463616555
+    Steam: 2477010
+    Playstation: EP5609-CUSA48965_00-0491636107761153
+    Xbox: ticket-to-ride-the-board-game/9PLD08F553L4/0010
+    Switch: ticket-to-ride
+
+- Name: Exploding Kittens
+  BggId: 172225
+  PlatformIds:
+    GooglePlay: com.marmalade.explodingkittens
+    AppStore: 6478287619
+    Steam: 2999030
+
+- Name: Taboo
+  BggId: 1111
+  PlatformIds:
+    GooglePlay: com.marmalade.taboo
+    AppStore: 1563932741
+

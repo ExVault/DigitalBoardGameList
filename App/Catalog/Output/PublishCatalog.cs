@@ -1,16 +1,30 @@
-﻿namespace DigitalBoardGameList.App.Catalog.Output;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
-public class PublishCatalog : AbstractCatalog<GameDto>
+namespace DigitalBoardGameList.App.Catalog.Output;
+
+public class PublishCatalog
 {
-    public PublishCatalog(IReadOnlyList<GameDto> games) : base(games)
+    public IReadOnlyList<GameDto> Games { get; init; } = null!;
+    public DateTimeOffset PublishDate { get; init; }
+
+    public PublishCatalog(List<GameDto> games)
     {
+        games.Sort((a, b) => a.Bgg.Rank.CompareTo(b.Bgg.Rank));
+        Games = games;
+        PublishDate = DateTimeOffset.UtcNow;
     }
 
     public static PublishCatalog? FromLocalJsonFile(string? path)
     {
-        if (path == null || !File.Exists(path))
+        if (!File.Exists(path))
             return null;
-        
-        return new PublishCatalog(CatalogLoader.FromLocalJsonFile<GameDto>(path));
+
+        return JsonSerializer.Deserialize<PublishCatalog>(File.ReadAllText(path))!;
+    }
+
+    [JsonConstructor]
+    public PublishCatalog()
+    {
     }
 }

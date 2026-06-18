@@ -11,20 +11,20 @@ public class GithubActionLog
             "true",
             StringComparison.OrdinalIgnoreCase);
     }
-    
+
     public static void Warning(string msg)
     {
-        if (!IsGitHubAction) 
+        if (!IsGitHubAction)
             return;
-        
+
         Console.WriteLine($"::warning::{Escape(msg)}");
     }
 
     public static void Error(string msg)
     {
-        if (!IsGitHubAction) 
+        if (!IsGitHubAction)
             return;
-        
+
         Console.WriteLine($"::error::{Escape(msg)}");
     }
 

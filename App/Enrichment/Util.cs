@@ -5,6 +5,7 @@ public static class Util
     public static string CleanDeveloperName(string name)
     {
         name = name.Replace(" llc", string.Empty, StringComparison.OrdinalIgnoreCase);
+        name = name.Replace(" ltd", string.Empty, StringComparison.OrdinalIgnoreCase);
         name = name.Replace(" inc", string.Empty, StringComparison.OrdinalIgnoreCase);
         name = name.Replace(" gmbh", string.Empty, StringComparison.OrdinalIgnoreCase);
         name = name.Replace(" s.r.o", string.Empty, StringComparison.OrdinalIgnoreCase);

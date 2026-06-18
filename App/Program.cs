@@ -60,7 +60,7 @@ var enrichment = new EnrichmentProcess(gameCatalog, previousCatalog, settings);
 
 var publishCatalog = await enrichment.RunAsync();
 
-var json = JsonSerializer.Serialize(publishCatalog.Games.OrderBy(d => d.Bgg.Rank), 
+var json = JsonSerializer.Serialize(publishCatalog,
     new JsonSerializerOptions
     {
         WriteIndented = true,

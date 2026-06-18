@@ -15,6 +15,10 @@ public class GooglePlayScraper : CommonGameEnricher
         @"Updated on\s*</div>\s*<div[^>]*>\s*([^<]+)\s*</div>",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
+    private readonly Regex _discountRegex = new(
+        @"(\d+(?:\.\d+)?)%\s*off</span>\s*<span[^>]*>[^<]*</span>\s*Offer ends",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
 
     public GooglePlayScraper(RequestDelay delay) : base(delay)
     {
@@ -37,10 +41,22 @@ public class GooglePlayScraper : CommonGameEnricher
         {
             var price = decimal.Parse(priceMatch.Groups[1].Value, CultureInfo.InvariantCulture);
 
+            decimal discount;
+
+            var discountMatch = _discountRegex.Match(response);
+            if (discountMatch.Success)
+            {
+                discount = decimal.Parse(discountMatch.Groups[1].Value, CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                discount = 0;
+            }
+
             Log.Debug("[{Type}] Assigning price {Price} to {GameName} on {Platform}",
                 nameof(GooglePlayScraper), price, currentData.Game.Name, Platform.Names.GooglePlay);
 
-            currentData.Platforms[Platform.Names.GooglePlay].Price = price;
+            currentData.Platforms[Platform.Names.GooglePlay].Price = new PriceData(price, discount);
         }
         else
         {

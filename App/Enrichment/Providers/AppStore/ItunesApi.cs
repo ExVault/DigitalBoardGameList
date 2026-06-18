@@ -108,12 +108,15 @@ public class ItunesApi : TimeThrottledHttp, IGameEnricher
     {
         var price = json.GetProperty("price").GetDecimal();
 
+        // Apple does not provide any discount info whatsoever, even on appstore frontend
+        var discount = 0;
+
         Log.Debug("[{Type}] Assigning price {Price} to {GameName} on {Platform}",
             nameof(ItunesApi), price, currentData.Game.Name, Platform.Names.AppStore);
 
         var platformData = currentData.Platforms[Platform.Names.AppStore];
 
-        platformData.Price = price;
+        platformData.Price = new PriceData(price, discount);
 
         var dateTime = json.GetProperty("currentVersionReleaseDate").GetDateTime();
         var date = DateOnly.FromDateTime(dateTime);

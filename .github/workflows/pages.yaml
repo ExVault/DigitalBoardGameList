@@ -14,25 +14,25 @@ on:
           - Debug
           - Information
           - Warning
-          - 
+          -
       previousCatalogUrl:
         description: Previous catalog url
         required: false
         default: https://exvault.github.io/DigitalBoardGameList/data.json
         type: string
-        
+      
       onlyNew:
         description: Only new
         required: true
         default: false
         type: boolean
-        
+      
       forceDlcUpdate:
         description: Force DLC update
         required: true
         default: false
         type: boolean
-        
+      
       testRun:
         description: Test run
         required: true

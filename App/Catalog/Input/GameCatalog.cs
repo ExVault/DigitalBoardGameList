@@ -1,16 +1,21 @@
 ﻿using Serilog;
+using YamlDotNet.Serialization;
 
 namespace DigitalBoardGameList.App.Catalog.Input;
 
-public class GameCatalog : AbstractCatalog<GameEntry>
+public class GameCatalog
 {
-    public GameCatalog(IReadOnlyList<GameEntry> games) : base(games)
+    public IReadOnlyList<GameEntry> Games { get; }
+
+    private GameCatalog(IReadOnlyList<GameEntry> games)
     {
+        Games = games;
     }
 
     public static GameCatalog FromLocalYamlFile(string path)
     {
-        return new GameCatalog(CatalogLoader.FromLocalYamlFile<GameEntry>(path));
+        var list = new Deserializer().Deserialize<List<GameEntry>>(File.ReadAllText(path));
+        return new GameCatalog(list);
     }
 
     public bool VerifyUnique()

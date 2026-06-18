@@ -48,20 +48,20 @@ public class SteamAppDetailsApi : CommonGameEnricher
         var isFree = data.GetProperty("is_free").GetBoolean();
         if (isFree)
         {
-            enrich.Platforms[Platform.Names.Steam].Price = 0;
+            enrich.Platforms[Platform.Names.Steam].Price = PriceData.Zero;
         }
         else
         {
             var priceOverview = data.GetProperty("price_overview");
             var priceFinal = priceOverview.GetProperty("final").GetDecimal();
             //var priceInitial = priceOverview.GetProperty("initial").GetDecimal();
-
+            var discount = priceOverview.GetProperty("discount_percent").GetDecimal();
             var price = priceFinal / 100;
 
             Log.Debug("[{Type}] Assigning price {Price} to {GameName} on {Platform}",
                 nameof(SteamAppDetailsApi), price, enrich.Game.Name, Platform.Names.Steam);
 
-            enrich.Platforms[Platform.Names.Steam].Price = price;
+            enrich.Platforms[Platform.Names.Steam].Price = new PriceData(price, discount);
         }
 
         if (enrich.Game.Developer == null)
