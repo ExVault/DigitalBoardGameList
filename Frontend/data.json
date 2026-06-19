@@ -38,8 +38,7 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 14.94,
-            "DiscountPct": 35
+            "Value": 22.99
           }
         }
       ],
@@ -85,7 +84,7 @@
         },
         {
           "Platform": "Playstation",
-          "Url": "https://store.playstation.com/product/EP4917-PPSA08116_00-GLOOMHAVENGOLDB1"
+          "Url": "https://store.playstation.com/en-us/product/UP4744-PPSA08115_00-GLOOMHAVENGOLDB1"
         },
         {
           "Platform": "Xbox",
@@ -168,16 +167,16 @@
       ],
       "LastUpdates": [
         {
-          "Platform": "AppStore",
-          "LastUpdate": "2026-06-17"
+          "Platform": "GooglePlay",
+          "LastUpdate": "2026-06-18"
         },
         {
-          "Platform": "GooglePlay",
-          "LastUpdate": "2026-06-16"
+          "Platform": "AppStore",
+          "LastUpdate": "2026-06-18"
         },
         {
           "Platform": "Steam",
-          "LastUpdate": "2026-06-16"
+          "LastUpdate": "2026-06-17"
         }
       ],
       "Dlcs": [
@@ -185,7 +184,7 @@
         "Immortality",
         "Rise of Ix"
       ],
-      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/38/0f/38/380f38a8-58a8-dfab-f2f4-111f70213624/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/be/ec/21beec3e-6385-955a-b527-08ca6d7478b6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
       "Developer": "Dire Wolf",
       "Publisher": "Dire Wolf",
       "KnownTotalDlcCount": 3
@@ -222,10 +221,9 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
+          "Platform": "GooglePlay",
           "Price": {
-            "Value": 6.99,
-            "DiscountPct": 65
+            "Value": 8.99
           }
         },
         {
@@ -235,9 +233,9 @@
           }
         },
         {
-          "Platform": "GooglePlay",
+          "Platform": "Steam",
           "Price": {
-            "Value": 8.99
+            "Value": 19.99
           }
         }
       ],
@@ -332,7 +330,6 @@
         "Branch \u0026 Claw",
         "Promo Pack 1: Flame"
       ],
-      "PriceTemplate": "Free to Play on Mobile\\n{Steam} on PC",
       "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/43/d2/7d/43d27dc6-fb7a-c6f2-4761-53a94ce05bb7/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
       "Developer": "Handelabra Games",
       "Publisher": "Handelabra Games",
@@ -618,7 +615,8 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 39.99
+            "Value": 29.99,
+            "DiscountPct": 25
           }
         }
       ],
@@ -855,7 +853,8 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 19.99
+            "Value": 9.99,
+            "DiscountPct": 50
           }
         }
       ],
@@ -1051,7 +1050,7 @@
         },
         {
           "Platform": "Playstation",
-          "Url": "https://store.playstation.com/product/EP2723-PPSA20773_00-WINGSPAN0EU0PS5D"
+          "Url": "https://store.playstation.com/en-us/product/EP2723-PPSA20773_00-WINGSPAN0EU0PS5D"
         },
         {
           "Platform": "Xbox",
@@ -1064,6 +1063,13 @@
       ],
       "Prices": [
         {
+          "Platform": "GooglePlay",
+          "Price": {
+            "Value": 5.00,
+            "DiscountPct": 50
+          }
+        },
+        {
           "Platform": "Steam",
           "Price": {
             "Value": 7.99,
@@ -1075,26 +1081,20 @@
           "Price": {
             "Value": 9.99
           }
-        },
-        {
-          "Platform": "GooglePlay",
-          "Price": {
-            "Value": 9.99
-          }
         }
       ],
       "LastUpdates": [
         {
-          "Platform": "AppStore",
-          "LastUpdate": "2026-06-15"
+          "Platform": "GooglePlay",
+          "LastUpdate": "2026-06-19"
         },
         {
           "Platform": "Steam",
-          "LastUpdate": "2026-06-15"
+          "LastUpdate": "2026-06-18"
         },
         {
-          "Platform": "GooglePlay",
-          "LastUpdate": "2026-06-03"
+          "Platform": "AppStore",
+          "LastUpdate": "2026-06-15"
         }
       ],
       "Dlcs": [
@@ -1117,7 +1117,7 @@
       "Bgg": {
         "Id": 251247,
         "Url": "https://boardgamegeek.com/boardgame/251247",
-        "Rank": 40,
+        "Rank": 39,
         "Rating": 8.1
       },
       "Urls": [
@@ -1155,7 +1155,7 @@
       "Bgg": {
         "Id": 199792,
         "Url": "https://boardgamegeek.com/boardgame/199792",
-        "Rank": 43,
+        "Rank": 44,
         "Rating": 8
       },
       "Urls": [
@@ -1425,7 +1425,8 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 19.99
+            "Value": 4.99,
+            "DiscountPct": 75
           }
         }
       ],
@@ -2156,13 +2157,6 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
-          "Price": {
-            "Value": 1.46,
-            "DiscountPct": 79
-          }
-        },
-        {
           "Platform": "AppStore",
           "Price": {
             "Value": 3.99
@@ -2172,6 +2166,12 @@
           "Platform": "GooglePlay",
           "Price": {
             "Value": 4.49
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 6.99
           }
         }
       ],
@@ -2367,7 +2367,7 @@
       "Bgg": {
         "Id": 34635,
         "Url": "https://boardgamegeek.com/boardgame/34635",
-        "Rank": 188,
+        "Rank": 189,
         "Rating": 7.5
       },
       "Urls": [
@@ -2404,7 +2404,8 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 14.99
+            "Value": 9.89,
+            "DiscountPct": 34
           }
         }
       ],
@@ -2455,9 +2456,10 @@
       ],
       "Prices": [
         {
-          "Platform": "GooglePlay",
+          "Platform": "Steam",
           "Price": {
-            "Value": 6.99
+            "Value": 6.49,
+            "DiscountPct": 50
           }
         },
         {
@@ -2467,9 +2469,9 @@
           }
         },
         {
-          "Platform": "Steam",
+          "Platform": "GooglePlay",
           "Price": {
-            "Value": 12.99
+            "Value": 6.99
           }
         }
       ],
@@ -2720,7 +2722,7 @@
       "Bgg": {
         "Id": 103343,
         "Url": "https://boardgamegeek.com/boardgame/103343",
-        "Rank": 236,
+        "Rank": 237,
         "Rating": 7.5
       },
       "Urls": [
@@ -2747,13 +2749,6 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
-          "Price": {
-            "Value": 6.99,
-            "DiscountPct": 65
-          }
-        },
-        {
           "Platform": "GooglePlay",
           "Price": {
             "Value": 8.99
@@ -2763,6 +2758,12 @@
           "Platform": "AppStore",
           "Price": {
             "Value": 9.99
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 19.99
           }
         }
       ],
@@ -2825,6 +2826,12 @@
       ],
       "Prices": [
         {
+          "Platform": "AppStore",
+          "Price": {
+            "Value": 4.99
+          }
+        },
+        {
           "Platform": "GooglePlay",
           "Price": {
             "Value": 5.99
@@ -2833,14 +2840,7 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 3.49,
-            "DiscountPct": 65
-          }
-        },
-        {
-          "Platform": "AppStore",
-          "Price": {
-            "Value": 4.99
+            "Value": 9.99
           }
         }
       ],
@@ -2875,7 +2875,7 @@
       "Bgg": {
         "Id": 148228,
         "Url": "https://boardgamegeek.com/boardgame/148228",
-        "Rank": 243,
+        "Rank": 244,
         "Rating": 7.4
       },
       "Urls": [
@@ -2888,8 +2888,7 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 1.99,
-            "DiscountPct": 80
+            "Value": 9.99
           }
         }
       ],
@@ -2932,7 +2931,7 @@
         },
         {
           "Platform": "Playstation",
-          "Url": "https://store.playstation.com/product/EP5609-CUSA48965_00-0491636107761153"
+          "Url": "https://store.playstation.com/en-us/product/EP5609-CUSA48965_00-0491636107761153"
         },
         {
           "Platform": "Xbox",
@@ -3024,7 +3023,7 @@
         },
         {
           "Platform": "Playstation",
-          "Url": "https://store.playstation.com/product/EP2723-PPSA23883_00-CALICOPS50000000"
+          "Url": "https://store.playstation.com/en-us/product/EP2723-PPSA23883_00-CALICOPS50000000"
         },
         {
           "Platform": "Xbox",
@@ -3146,13 +3145,6 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
-          "Price": {
-            "Value": 1.46,
-            "DiscountPct": 79
-          }
-        },
-        {
           "Platform": "AppStore",
           "Price": {
             "Value": 3.99
@@ -3162,6 +3154,12 @@
           "Platform": "GooglePlay",
           "Price": {
             "Value": 4.49
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 6.99
           }
         }
       ],
@@ -3189,7 +3187,7 @@
       "Bgg": {
         "Id": 274637,
         "Url": "https://boardgamegeek.com/boardgame/274637",
-        "Rank": 293,
+        "Rank": 294,
         "Rating": 7.7
       },
       "Urls": [
@@ -3375,15 +3373,15 @@
           "LastUpdate": "2026-06-17"
         },
         {
-          "Platform": "Steam",
+          "Platform": "AppStore",
           "LastUpdate": "2026-06-17"
         },
         {
-          "Platform": "AppStore",
-          "LastUpdate": "2026-06-16"
+          "Platform": "Steam",
+          "LastUpdate": "2026-06-17"
         }
       ],
-      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/27/34/7527345b-f959-0176-ec74-4101efd31b95/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/70/af/b770af87-f436-8bd8-ec93-c5f8190c38d4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
       "Developer": "Wise Wizard Games",
       "Publisher": "Wise Wizard Games",
       "KnownTotalDlcCount": 0
@@ -3517,7 +3515,6 @@
         "The Mosquito",
         "The Ladybug"
       ],
-      "PriceTemplate": "Free to Play on Mobile\\n{Steam} on PC",
       "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/5f/89/0c5f8908-0657-2205-5d17-0bf82a34c57c/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
       "Developer": "Different developers",
       "Publisher": "Different developers",
@@ -3528,7 +3525,7 @@
       "Bgg": {
         "Id": 27833,
         "Url": "https://boardgamegeek.com/boardgame/27833",
-        "Rank": 342,
+        "Rank": 343,
         "Rating": 7.5
       },
       "Urls": [
@@ -3551,9 +3548,10 @@
       ],
       "Prices": [
         {
-          "Platform": "GooglePlay",
+          "Platform": "Steam",
           "Price": {
-            "Value": 4.99
+            "Value": 4.49,
+            "DiscountPct": 55
           }
         },
         {
@@ -3563,9 +3561,9 @@
           }
         },
         {
-          "Platform": "Steam",
+          "Platform": "GooglePlay",
           "Price": {
-            "Value": 9.99
+            "Value": 4.99
           }
         }
       ],
@@ -3600,7 +3598,7 @@
       "Bgg": {
         "Id": 50,
         "Url": "https://boardgamegeek.com/boardgame/50",
-        "Rank": 346,
+        "Rank": 345,
         "Rating": 7.3
       },
       "Urls": [
@@ -3633,7 +3631,7 @@
       "Bgg": {
         "Id": 129622,
         "Url": "https://boardgamegeek.com/boardgame/129622",
-        "Rank": 369,
+        "Rank": 370,
         "Rating": 7.2
       },
       "Urls": [
@@ -3652,13 +3650,6 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
-          "Price": {
-            "Value": 1.46,
-            "DiscountPct": 79
-          }
-        },
-        {
           "Platform": "GooglePlay",
           "Price": {
             "Value": 3.49
@@ -3668,6 +3659,12 @@
           "Platform": "AppStore",
           "Price": {
             "Value": 3.99
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 6.99
           }
         }
       ],
@@ -3695,7 +3692,7 @@
       "Bgg": {
         "Id": 181279,
         "Url": "https://boardgamegeek.com/boardgame/181279",
-        "Rank": 400,
+        "Rank": 402,
         "Rating": 7.4
       },
       "Urls": [
@@ -3713,7 +3710,7 @@
         },
         {
           "Platform": "Playstation",
-          "Url": "https://store.playstation.com/product/EP2866-CUSA29805_00-FURYOFDRACULASIE"
+          "Url": "https://store.playstation.com/en-us/product/UP3004-CUSA29806_00-FURYOFDRACULASIA"
         },
         {
           "Platform": "Xbox",
@@ -3784,13 +3781,6 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
-          "Price": {
-            "Value": 2.49,
-            "DiscountPct": 75
-          }
-        },
-        {
           "Platform": "AppStore",
           "Price": {
             "Value": 4.99
@@ -3800,6 +3790,12 @@
           "Platform": "GooglePlay",
           "Price": {
             "Value": 5.99
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 9.99
           }
         }
       ],
@@ -3965,7 +3961,7 @@
       "Bgg": {
         "Id": 119890,
         "Url": "https://boardgamegeek.com/boardgame/119890",
-        "Rank": 460,
+        "Rank": 461,
         "Rating": 7.3
       },
       "Urls": [
@@ -4026,7 +4022,7 @@
       "Bgg": {
         "Id": 269210,
         "Url": "https://boardgamegeek.com/boardgame/269210",
-        "Rank": 466,
+        "Rank": 467,
         "Rating": 7.4
       },
       "Urls": [
@@ -4072,7 +4068,7 @@
       "Bgg": {
         "Id": 161614,
         "Url": "https://boardgamegeek.com/boardgame/161614",
-        "Rank": 558,
+        "Rank": 559,
         "Rating": 7.4
       },
       "Urls": [
@@ -4133,7 +4129,7 @@
       "Bgg": {
         "Id": 353545,
         "Url": "https://boardgamegeek.com/boardgame/353545",
-        "Rank": 581,
+        "Rank": 580,
         "Rating": 7.4
       },
       "Urls": [
@@ -4179,7 +4175,7 @@
       "Bgg": {
         "Id": 43570,
         "Url": "https://boardgamegeek.com/boardgame/43570",
-        "Rank": 592,
+        "Rank": 593,
         "Rating": 7.1
       },
       "Urls": [
@@ -4248,12 +4244,6 @@
       ],
       "Prices": [
         {
-          "Platform": "GooglePlay",
-          "Price": {
-            "Value": 3.99
-          }
-        },
-        {
           "Platform": "AppStore",
           "Price": {
             "Value": 2.99
@@ -4264,6 +4254,12 @@
           "Price": {
             "Value": 3.89,
             "DiscountPct": 70
+          }
+        },
+        {
+          "Platform": "GooglePlay",
+          "Price": {
+            "Value": 3.99
           }
         }
       ],
@@ -4361,7 +4357,7 @@
       "Bgg": {
         "Id": 290236,
         "Url": "https://boardgamegeek.com/boardgame/290236",
-        "Rank": 598,
+        "Rank": 599,
         "Rating": 7.2
       },
       "Urls": [
@@ -4380,16 +4376,16 @@
       ],
       "Prices": [
         {
-          "Platform": "AppStore",
-          "Price": {
-            "Value": 4.99
-          }
-        },
-        {
           "Platform": "GooglePlay",
           "Price": {
             "Value": 6.39,
             "DiscountPct": 20
+          }
+        },
+        {
+          "Platform": "AppStore",
+          "Price": {
+            "Value": 7.99
           }
         },
         {
@@ -4423,7 +4419,7 @@
       "Bgg": {
         "Id": 274960,
         "Url": "https://boardgamegeek.com/boardgame/274960",
-        "Rank": 603,
+        "Rank": 604,
         "Rating": 7.1
       },
       "Urls": [
@@ -4442,16 +4438,16 @@
       ],
       "Prices": [
         {
-          "Platform": "AppStore",
-          "Price": {
-            "Value": 2.99
-          }
-        },
-        {
           "Platform": "GooglePlay",
           "Price": {
             "Value": 3.49,
             "DiscountPct": 41
+          }
+        },
+        {
+          "Platform": "AppStore",
+          "Price": {
+            "Value": 5.99
           }
         },
         {
@@ -4485,7 +4481,7 @@
       "Bgg": {
         "Id": 232414,
         "Url": "https://boardgamegeek.com/boardgame/232414",
-        "Rank": 637,
+        "Rank": 638,
         "Rating": 7.4
       },
       "Urls": [
@@ -4573,9 +4569,10 @@
       ],
       "Prices": [
         {
-          "Platform": "GooglePlay",
+          "Platform": "Steam",
           "Price": {
-            "Value": 9.99
+            "Value": 7.99,
+            "DiscountPct": 60
           }
         },
         {
@@ -4585,9 +4582,9 @@
           }
         },
         {
-          "Platform": "Steam",
+          "Platform": "GooglePlay",
           "Price": {
-            "Value": 19.99
+            "Value": 9.99
           }
         }
       ],
@@ -4615,7 +4612,7 @@
       "Bgg": {
         "Id": 62227,
         "Url": "https://boardgamegeek.com/boardgame/62227",
-        "Rank": 652,
+        "Rank": 653,
         "Rating": 7.6
       },
       "Urls": [
@@ -4738,7 +4735,7 @@
       "Bgg": {
         "Id": 102652,
         "Url": "https://boardgamegeek.com/boardgame/102652",
-        "Rank": 691,
+        "Rank": 692,
         "Rating": 7.1
       },
       "Urls": [
@@ -4816,7 +4813,7 @@
       "Bgg": {
         "Id": 244115,
         "Url": "https://boardgamegeek.com/boardgame/244115",
-        "Rank": 731,
+        "Rank": 732,
         "Rating": 7.4
       },
       "Urls": [
@@ -5002,7 +4999,6 @@
         "Alone and Unafraid Trait Pack",
         "Flight Expansion"
       ],
-      "PriceTemplate": "Free to Play on Mobile\\n{Steam} on PC",
       "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/12/77/9d/12779ded-7d4c-2d9f-6801-f6832927903f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
       "Developer": "North Star Digital Studios",
       "Publisher": "North Star Games",
@@ -5013,7 +5009,7 @@
       "Bgg": {
         "Id": 306881,
         "Url": "https://boardgamegeek.com/boardgame/306881",
-        "Rank": 800,
+        "Rank": 799,
         "Rating": 7.6
       },
       "Urls": [
@@ -5134,7 +5130,6 @@
         "Deliverance Expansion",
         "Delirium"
       ],
-      "PriceTemplate": "Free to Play on Mobile\\n{Steam} on PC",
       "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/91/98/7e/91987e4c-f3cd-318e-f04c-0b4d17768285/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
       "Developer": "Playdek",
       "Publisher": "Playdek",
@@ -5145,7 +5140,7 @@
       "Bgg": {
         "Id": 363307,
         "Url": "https://boardgamegeek.com/boardgame/363307",
-        "Rank": 849,
+        "Rank": 850,
         "Rating": 7.4
       },
       "Urls": [
@@ -5210,7 +5205,7 @@
       "Bgg": {
         "Id": 123540,
         "Url": "https://boardgamegeek.com/boardgame/123540",
-        "Rank": 850,
+        "Rank": 851,
         "Rating": 6.9
       },
       "Urls": [
@@ -5243,7 +5238,8 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 11.99
+            "Value": 5.99,
+            "DiscountPct": 50
           }
         }
       ],
@@ -5317,7 +5313,7 @@
       "Bgg": {
         "Id": 232219,
         "Url": "https://boardgamegeek.com/boardgame/232219",
-        "Rank": 897,
+        "Rank": 899,
         "Rating": 7.1
       },
       "Urls": [
@@ -5378,7 +5374,7 @@
       "Bgg": {
         "Id": 196526,
         "Url": "https://boardgamegeek.com/boardgame/196526",
-        "Rank": 1005,
+        "Rank": 1007,
         "Rating": 7.3
       },
       "Urls": [
@@ -5407,12 +5403,12 @@
       ],
       "LastUpdates": [
         {
-          "Platform": "AppStore",
-          "LastUpdate": "2026-03-27"
+          "Platform": "GooglePlay",
+          "LastUpdate": "2026-06-18"
         },
         {
-          "Platform": "GooglePlay",
-          "LastUpdate": "2026-03-23"
+          "Platform": "AppStore",
+          "LastUpdate": "2026-03-27"
         }
       ],
       "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/90/cd/b5/90cdb566-b2aa-f633-df99-158c7b9943e7/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
@@ -5544,7 +5540,7 @@
       "Bgg": {
         "Id": 244992,
         "Url": "https://boardgamegeek.com/boardgame/244992",
-        "Rank": 1121,
+        "Rank": 1122,
         "Rating": 6.7
       },
       "Urls": [
@@ -5590,7 +5586,7 @@
       "Bgg": {
         "Id": 228504,
         "Url": "https://boardgamegeek.com/boardgame/228504",
-        "Rank": 1189,
+        "Rank": 1188,
         "Rating": 7
       },
       "Urls": [
@@ -5652,7 +5648,7 @@
       "Bgg": {
         "Id": 228855,
         "Url": "https://boardgamegeek.com/boardgame/228855",
-        "Rank": 1215,
+        "Rank": 1216,
         "Rating": 7.2
       },
       "Urls": [
@@ -5685,7 +5681,8 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 14.99
+            "Value": 11.24,
+            "DiscountPct": 25
           }
         }
       ],
@@ -5713,7 +5710,7 @@
       "Bgg": {
         "Id": 419195,
         "Url": "https://boardgamegeek.com/boardgame/419195",
-        "Rank": 1222,
+        "Rank": 1223,
         "Rating": 7.2
       },
       "Urls": [
@@ -5759,7 +5756,7 @@
       "Bgg": {
         "Id": 204027,
         "Url": "https://boardgamegeek.com/boardgame/204027",
-        "Rank": 1229,
+        "Rank": 1231,
         "Rating": 6.8
       },
       "Urls": [
@@ -5862,11 +5859,57 @@
       "KnownTotalDlcCount": 0
     },
     {
+      "Name": "Cahoots",
+      "Bgg": {
+        "Id": 246761,
+        "Url": "https://boardgamegeek.com/boardgame/246761",
+        "Rank": 1313,
+        "Rating": 7.1
+      },
+      "Urls": [
+        {
+          "Platform": "GooglePlay",
+          "Url": "https://play.google.com/store/apps/details?id=de.brettspielwelt.tippitoppi"
+        },
+        {
+          "Platform": "AppStore",
+          "Url": "https://apps.apple.com/app/id1513657493"
+        }
+      ],
+      "Prices": [
+        {
+          "Platform": "GooglePlay",
+          "Price": {
+            "Value": 2.99
+          }
+        },
+        {
+          "Platform": "AppStore",
+          "Price": {
+            "Value": 2.99
+          }
+        }
+      ],
+      "LastUpdates": [
+        {
+          "Platform": "GooglePlay",
+          "LastUpdate": "2025-08-30"
+        },
+        {
+          "Platform": "AppStore",
+          "LastUpdate": "2020-09-30"
+        }
+      ],
+      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/32/41/60/32416015-3f83-82d6-f942-fc8a304d89e5/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg",
+      "Developer": "BrettspielWelt",
+      "KnownTotalDlcCount": 0
+    },
+    {
       "Name": "Smash Up",
       "Bgg": {
         "Id": 122522,
         "Url": "https://boardgamegeek.com/boardgame/122522",
-        "Rank": 1310,
+        "Rank": 1315,
         "Rating": 6.7
       },
       "Urls": [
@@ -5928,57 +5971,11 @@
       "KnownTotalDlcCount": 2
     },
     {
-      "Name": "Cahoots",
-      "Bgg": {
-        "Id": 246761,
-        "Url": "https://boardgamegeek.com/boardgame/246761",
-        "Rank": 1312,
-        "Rating": 7.1
-      },
-      "Urls": [
-        {
-          "Platform": "GooglePlay",
-          "Url": "https://play.google.com/store/apps/details?id=de.brettspielwelt.tippitoppi"
-        },
-        {
-          "Platform": "AppStore",
-          "Url": "https://apps.apple.com/app/id1513657493"
-        }
-      ],
-      "Prices": [
-        {
-          "Platform": "GooglePlay",
-          "Price": {
-            "Value": 2.99
-          }
-        },
-        {
-          "Platform": "AppStore",
-          "Price": {
-            "Value": 2.99
-          }
-        }
-      ],
-      "LastUpdates": [
-        {
-          "Platform": "GooglePlay",
-          "LastUpdate": "2025-08-30"
-        },
-        {
-          "Platform": "AppStore",
-          "LastUpdate": "2020-09-30"
-        }
-      ],
-      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/32/41/60/32416015-3f83-82d6-f942-fc8a304d89e5/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg",
-      "Developer": "BrettspielWelt",
-      "KnownTotalDlcCount": 0
-    },
-    {
       "Name": "Super Mega Lucky Box",
       "Bgg": {
         "Id": 341530,
         "Url": "https://boardgamegeek.com/boardgame/341530",
-        "Rank": 1381,
+        "Rank": 1382,
         "Rating": 7
       },
       "Urls": [
@@ -6092,7 +6089,7 @@
       "Bgg": {
         "Id": 375852,
         "Url": "https://boardgamegeek.com/boardgame/375852",
-        "Rank": 1567,
+        "Rank": 1558,
         "Rating": 7.5
       },
       "Urls": [
@@ -6154,7 +6151,7 @@
       "Bgg": {
         "Id": 159109,
         "Url": "https://boardgamegeek.com/boardgame/159109",
-        "Rank": 1769,
+        "Rank": 1770,
         "Rating": 6.9
       },
       "Urls": [
@@ -6173,9 +6170,10 @@
       ],
       "Prices": [
         {
-          "Platform": "GooglePlay",
+          "Platform": "Steam",
           "Price": {
-            "Value": 4.99
+            "Value": 1.99,
+            "DiscountPct": 80
           }
         },
         {
@@ -6185,9 +6183,9 @@
           }
         },
         {
-          "Platform": "Steam",
+          "Platform": "GooglePlay",
           "Price": {
-            "Value": 9.99
+            "Value": 4.99
           }
         }
       ],
@@ -6222,7 +6220,7 @@
       "Bgg": {
         "Id": 176229,
         "Url": "https://boardgamegeek.com/boardgame/176229",
-        "Rank": 1830,
+        "Rank": 1832,
         "Rating": 6.6
       },
       "Urls": [
@@ -6268,7 +6266,7 @@
       "Bgg": {
         "Id": 131366,
         "Url": "https://boardgamegeek.com/boardgame/131366",
-        "Rank": 1834,
+        "Rank": 1836,
         "Rating": 6.5
       },
       "Urls": [
@@ -6291,9 +6289,10 @@
       ],
       "Prices": [
         {
-          "Platform": "GooglePlay",
+          "Platform": "Steam",
           "Price": {
-            "Value": 4.99
+            "Value": 3.99,
+            "DiscountPct": 50
           }
         },
         {
@@ -6303,9 +6302,9 @@
           }
         },
         {
-          "Platform": "Steam",
+          "Platform": "GooglePlay",
           "Price": {
-            "Value": 7.99
+            "Value": 4.99
           }
         }
       ],
@@ -6360,13 +6359,6 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
-          "Price": {
-            "Value": 1.46,
-            "DiscountPct": 79
-          }
-        },
-        {
           "Platform": "AppStore",
           "Price": {
             "Value": 3.99
@@ -6376,6 +6368,12 @@
           "Platform": "GooglePlay",
           "Price": {
             "Value": 4.49
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 6.99
           }
         }
       ],
@@ -6403,7 +6401,7 @@
       "Bgg": {
         "Id": 233678,
         "Url": "https://boardgamegeek.com/boardgame/233678",
-        "Rank": 1932,
+        "Rank": 1933,
         "Rating": 6.8
       },
       "Urls": [
@@ -6510,7 +6508,7 @@
       "Bgg": {
         "Id": 403116,
         "Url": "https://boardgamegeek.com/boardgame/403116",
-        "Rank": 1972,
+        "Rank": 1975,
         "Rating": 7.3
       },
       "Urls": [
@@ -6556,7 +6554,7 @@
       "Bgg": {
         "Id": 27627,
         "Url": "https://boardgamegeek.com/boardgame/27627",
-        "Rank": 2131,
+        "Rank": 2129,
         "Rating": 6.5
       },
       "Urls": [
@@ -6578,7 +6576,7 @@
         },
         {
           "Platform": "Playstation",
-          "Url": "https://store.playstation.com/product/EP2581-CUSA05920_00-0055885834704481"
+          "Url": "https://store.playstation.com/en-us/product/UP2719-CUSA06152_00-TALISMANDIGIEDIT"
         },
         {
           "Platform": "Xbox",
@@ -6684,7 +6682,7 @@
       "Bgg": {
         "Id": 330174,
         "Url": "https://boardgamegeek.com/boardgame/330174",
-        "Rank": 2174,
+        "Rank": 2173,
         "Rating": 7.1
       },
       "Urls": [
@@ -6730,7 +6728,7 @@
       "Bgg": {
         "Id": 41863,
         "Url": "https://boardgamegeek.com/boardgame/41863",
-        "Rank": 2269,
+        "Rank": 2270,
         "Rating": 6.9
       },
       "Urls": [
@@ -6795,7 +6793,7 @@
       "Bgg": {
         "Id": 271060,
         "Url": "https://boardgamegeek.com/boardgame/271060",
-        "Rank": 2420,
+        "Rank": 2422,
         "Rating": 7.6
       },
       "Urls": [
@@ -6828,7 +6826,8 @@
         {
           "Platform": "Steam",
           "Price": {
-            "Value": 9.99
+            "Value": 1.99,
+            "DiscountPct": 80
           }
         }
       ],
@@ -6910,7 +6909,7 @@
       "Bgg": {
         "Id": 1111,
         "Url": "https://boardgamegeek.com/boardgame/1111",
-        "Rank": 2470,
+        "Rank": 2471,
         "Rating": 6.3
       },
       "Urls": [
@@ -6956,7 +6955,7 @@
       "Bgg": {
         "Id": 300192,
         "Url": "https://boardgamegeek.com/boardgame/300192",
-        "Rank": 2501,
+        "Rank": 2500,
         "Rating": 7.5
       },
       "Urls": [
@@ -7078,7 +7077,7 @@
       "Bgg": {
         "Id": 205867,
         "Url": "https://boardgamegeek.com/boardgame/205867",
-        "Rank": 2740,
+        "Rank": 2741,
         "Rating": 6.8
       },
       "Urls": [
@@ -7139,7 +7138,7 @@
       "Bgg": {
         "Id": 313531,
         "Url": "https://boardgamegeek.com/boardgame/313531",
-        "Rank": 2956,
+        "Rank": 2957,
         "Rating": 6.9
       },
       "Urls": [
@@ -7185,7 +7184,7 @@
       "Bgg": {
         "Id": 253185,
         "Url": "https://boardgamegeek.com/boardgame/253185",
-        "Rank": 3229,
+        "Rank": 3230,
         "Rating": 6.7
       },
       "Urls": [
@@ -7246,7 +7245,7 @@
       "Bgg": {
         "Id": 147930,
         "Url": "https://boardgamegeek.com/boardgame/147930",
-        "Rank": 3438,
+        "Rank": 3440,
         "Rating": 6.8
       },
       "Urls": [
@@ -7265,13 +7264,6 @@
       ],
       "Prices": [
         {
-          "Platform": "Steam",
-          "Price": {
-            "Value": 1.46,
-            "DiscountPct": 79
-          }
-        },
-        {
           "Platform": "AppStore",
           "Price": {
             "Value": 3.99
@@ -7281,6 +7273,12 @@
           "Platform": "GooglePlay",
           "Price": {
             "Value": 4.49
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 6.99
           }
         }
       ],
@@ -7308,7 +7306,7 @@
       "Bgg": {
         "Id": 943,
         "Url": "https://boardgamegeek.com/boardgame/943",
-        "Rank": 3673,
+        "Rank": 3675,
         "Rating": 6.2
       },
       "Urls": [
@@ -7354,7 +7352,7 @@
       "Bgg": {
         "Id": 330152,
         "Url": "https://boardgamegeek.com/boardgame/330152",
-        "Rank": 3803,
+        "Rank": 3798,
         "Rating": 6.9
       },
       "Urls": [
@@ -7393,16 +7391,16 @@
       ],
       "LastUpdates": [
         {
-          "Platform": "GooglePlay",
-          "LastUpdate": "2026-06-11"
+          "Platform": "AppStore",
+          "LastUpdate": "2026-06-19"
         },
         {
-          "Platform": "AppStore",
-          "LastUpdate": "2026-06-11"
+          "Platform": "GooglePlay",
+          "LastUpdate": "2026-06-18"
         },
         {
           "Platform": "Steam",
-          "LastUpdate": "2026-06-11"
+          "LastUpdate": "2026-06-18"
         }
       ],
       "Dlcs": [
@@ -7411,7 +7409,7 @@
         "Jurassic",
         "Flight"
       ],
-      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e3/9c/35/e39c3582-c93d-95f6-266e-efed450d2c39/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+      "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3a/3d/c4/3a3dc42e-f24d-5980-acff-c715d4af1374/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
       "Developer": "North Star Digital Games",
       "Publisher": "North Star Games",
       "KnownTotalDlcCount": 4
@@ -7421,7 +7419,7 @@
       "Bgg": {
         "Id": 172225,
         "Url": "https://boardgamegeek.com/boardgame/172225",
-        "Rank": 3993,
+        "Rank": 3998,
         "Rating": 6.1
       },
       "Urls": [
@@ -7489,7 +7487,7 @@
       "Bgg": {
         "Id": 149853,
         "Url": "https://boardgamegeek.com/boardgame/149853",
-        "Rank": 4260,
+        "Rank": 4268,
         "Rating": 6.7
       },
       "Urls": [
@@ -7536,7 +7534,7 @@
       "Bgg": {
         "Id": 415550,
         "Url": "https://boardgamegeek.com/boardgame/415550",
-        "Rank": 4499,
+        "Rank": 4500,
         "Rating": 7.3
       },
       "Urls": [
@@ -7546,7 +7544,7 @@
         },
         {
           "Platform": "Playstation",
-          "Url": "https://store.playstation.com/product/UP2719-CUSA56071_00-TALISMANDIGITAL5"
+          "Url": "https://store.playstation.com/en-us/product/UP2719-CUSA56071_00-TALISMANDIGITAL5"
         },
         {
           "Platform": "Xbox",
@@ -7588,7 +7586,7 @@
       "Bgg": {
         "Id": 91034,
         "Url": "https://boardgamegeek.com/boardgame/91034",
-        "Rank": 4788,
+        "Rank": 4787,
         "Rating": 6.6
       },
       "Urls": [
@@ -7624,7 +7622,7 @@
       "Bgg": {
         "Id": 229956,
         "Url": "https://boardgamegeek.com/boardgame/229956",
-        "Rank": 5285,
+        "Rank": 5284,
         "Rating": 6.4
       },
       "Urls": [
@@ -7685,7 +7683,7 @@
       "Bgg": {
         "Id": 181811,
         "Url": "https://boardgamegeek.com/boardgame/181811",
-        "Rank": 5319,
+        "Rank": 5325,
         "Rating": 6.7
       },
       "Urls": [
@@ -7718,7 +7716,7 @@
       "Bgg": {
         "Id": 256713,
         "Url": "https://boardgamegeek.com/boardgame/256713",
-        "Rank": 5375,
+        "Rank": 5379,
         "Rating": 6.8
       },
       "Urls": [
@@ -7767,7 +7765,7 @@
         "Id": 107148,
         "Url": "https://boardgamegeek.com/boardgame/107148",
         "Rank": 6341,
-        "Rating": 7.4
+        "Rating": 7.3
       },
       "Urls": [
         {
@@ -7828,7 +7826,7 @@
       "Bgg": {
         "Id": 1927,
         "Url": "https://boardgamegeek.com/boardgame/1927",
-        "Rank": 6467,
+        "Rank": 6482,
         "Rating": 5.9
       },
       "Urls": [
@@ -7896,7 +7894,7 @@
       "Bgg": {
         "Id": 437273,
         "Url": "https://boardgamegeek.com/boardgame/437273",
-        "Rank": 6690,
+        "Rank": 6662,
         "Rating": 6.8
       },
       "Urls": [
@@ -7925,12 +7923,12 @@
       ],
       "LastUpdates": [
         {
-          "Platform": "AppStore",
-          "LastUpdate": "2026-05-12"
+          "Platform": "GooglePlay",
+          "LastUpdate": "2026-06-18"
         },
         {
-          "Platform": "GooglePlay",
-          "LastUpdate": "2026-01-02"
+          "Platform": "AppStore",
+          "LastUpdate": "2026-05-12"
         }
       ],
       "ImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/3d/63/9d3d63f3-2521-0ba5-3987-3e52039674c1/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
@@ -7942,7 +7940,7 @@
       "Bgg": {
         "Id": 220609,
         "Url": "https://boardgamegeek.com/boardgame/220609",
-        "Rank": 7450,
+        "Rank": 7452,
         "Rating": 7.8
       },
       "Urls": [
@@ -8006,7 +8004,7 @@
       "Bgg": {
         "Id": 258,
         "Url": "https://boardgamegeek.com/boardgame/258",
-        "Rank": 12258,
+        "Rank": 12255,
         "Rating": 5.7
       },
       "Urls": [
@@ -8052,5 +8050,5 @@
       "KnownTotalDlcCount": 2
     }
   ],
-  "PublishDate": "2026-06-17T17:04:00.7563651+00:00"
+  "PublishDate": "2026-06-19T17:57:55.9671643+00:00"
 }

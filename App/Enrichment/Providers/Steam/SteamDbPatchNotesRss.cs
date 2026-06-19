@@ -15,7 +15,7 @@ public class SteamDbPatchNotesRss : CommonGameEnricher
     protected override async Task EnrichSingleAsync(EnrichmentContext context, string gameId)
     {
         var currentData = context.CurrentData;
-        Log.Debug("[{Type}] Going to get last update for {GameName}", nameof(SteamDbPatchNotesRss), currentData.Game.Name);
+        Log.Information("[{Type}] Updating {GameName}", nameof(SteamDbPatchNotesRss), currentData.Game.Name);
         var response = await GetStringAsync(UrlHelper.SteamDbPatchNotesRss(gameId));
         Parse(response, currentData);
     }

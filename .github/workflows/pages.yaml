@@ -1,9 +1,10 @@
 name: Build and deploy Pages
 
 on:
+  schedule:
+    - cron: '0 15 * * *'
   workflow_dispatch:
     inputs:
-      
       logLevel:
         description: Log level
         required: true
@@ -14,7 +15,6 @@ on:
           - Debug
           - Information
           - Warning
-          -
       previousCatalogUrl:
         description: Previous catalog url
         required: false
@@ -71,7 +71,7 @@ jobs:
 
       - name: Download previous catalog
         env:
-          PREVIOUS_CATALOG_URL: ${{ inputs.previousCatalogUrl }}
+          PREVIOUS_CATALOG_URL: ${{ github.event_name == 'schedule' && 'https://exvault.github.io/DigitalBoardGameList/data.json' || inputs.previousCatalogUrl }}
         run: |
           mkdir -p _input
 
@@ -102,16 +102,21 @@ jobs:
           cp -a Frontend/. _site/
 
       - name: Generate data.json
+        env:
+          LOG_LEVEL: ${{ github.event_name == 'schedule' && 'Information' || inputs.logLevel }}
+          ONLY_NEW: ${{ github.event_name == 'schedule' && 'false' || inputs.onlyNew }}
+          FORCE_DLC_UPDATE: ${{ github.event_name == 'schedule' && 'false' || inputs.forceDlcUpdate }}
+          TEST_RUN: ${{ github.event_name == 'schedule' && 'false' || inputs.testRun }}
         run: >
           dotnet run --configuration Release --project DigitalBoardGameList.csproj --
-          LogLevel=${{ inputs.logLevel }}
+          LogLevel=$LOG_LEVEL
           GameCatalogPath=games.yaml
           OutputCatalogPath=_site/data.json
           PreviousCatalogPath=_input/previous-catalog.json
           BggCsvPath=_input/boardgames_ranks.csv
-          OnlyNew=${{ inputs.onlyNew }}
-          ForceDlcUpdate=${{ inputs.forceDlcUpdate }}
-          TestRun=${{ inputs.testRun }}
+          OnlyNew=$ONLY_NEW
+          ForceDlcUpdate=$FORCE_DLC_UPDATE
+          TestRun=$TEST_RUN
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

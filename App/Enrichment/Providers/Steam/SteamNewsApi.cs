@@ -28,7 +28,7 @@ public class SteamNewsApi : CommonGameEnricher
     protected override async Task EnrichSingleAsync(EnrichmentContext context, string gameId)
     {
         var currentData = context.CurrentData;
-        Log.Debug("[{Type}] Going to get last update for {GameName}", nameof(SteamNewsApi), currentData.Game.Name);
+        Log.Debug("[{Type}] Updating {GameName}", nameof(SteamNewsApi), currentData.Game.Name);
         var response = await GetStringAsync(UrlHelper.SteamNewsApi(gameId));
         Parse(response, currentData);
     }

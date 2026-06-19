@@ -83,7 +83,7 @@ public static class UrlHelper
 
     public static string Playstation(string id)
     {
-        return $"https://store.playstation.com/product/{id}";
+        return $"https://store.playstation.com/en-us/product/{id}";
     }
 
     public static string Xbox(string id)

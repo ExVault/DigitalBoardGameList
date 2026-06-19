@@ -20,7 +20,7 @@ public abstract class TimeThrottledHttp
     {
         for (var attempt = 1; attempt <= MaxRetries; attempt++)
         {
-            Log.Debug("[{Type}] Requesting {Url} (attempt {Attempt}/{Max})",
+            Log.Debug("[{Type}][{Attempt}/{Max}] Requesting {Url}",
                 nameof(TimeThrottledHttp), url, attempt, MaxRetries);
 
             await _requestDelay.Wait();

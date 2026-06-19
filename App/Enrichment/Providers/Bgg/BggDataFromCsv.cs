@@ -61,6 +61,8 @@ public class BggDataFromCsv : IGameEnricher
             currentData.Bgg.Rank = rank;
             currentData.Bgg.Rating = rating;
         }
+        
+        Log.Information("[{Type}] All games have been successfully updated", nameof(BggDataFromCsv));
     }
 
     private async Task<Dictionary<int, CsvGameEntry>> InitBggDataSource()

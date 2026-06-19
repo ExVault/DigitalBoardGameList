@@ -29,7 +29,7 @@ public class GooglePlayScraper : CommonGameEnricher
     protected override async Task EnrichSingleAsync(EnrichmentContext context, string gameId)
     {
         var currentData = context.CurrentData;
-        Log.Debug("[{Type}] Going to update {GameName}", nameof(GooglePlayScraper), currentData.Game.Name);
+        Log.Information("[{Type}] Updating {GameName}", nameof(GooglePlayScraper), currentData.Game.Name);
         var response = await GetStringAsync(UrlHelper.GooglePlayEnUs(gameId));
         Parse(response, currentData);
     }

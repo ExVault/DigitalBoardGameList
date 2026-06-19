@@ -1,4 +1,4 @@
-https://exvault.github.io/DigitalBoardGameList/
+https://exvault.github.io/DigitalBoardGameList
 
 List of digital board game adaptations.
 

@@ -15,11 +15,8 @@ public class SteamAppDetailsApi : CommonGameEnricher
     protected override async Task EnrichSingleAsync(EnrichmentContext context, string gameId)
     {
         var currentData = context.CurrentData;
-
-        Log.Debug("[{Type}] Going to get price data for {GameName}", nameof(SteamAppDetailsApi), currentData.Game.Name);
-
+        Log.Information("[{Type}] Updating {GameName}", nameof(SteamAppDetailsApi), currentData.Game.Name);
         var response = await GetStringAsync(UrlHelper.SteamAppDetailsApi(gameId));
-
         Parse(response, currentData, gameId, out var dlcData);
 
         if (dlcData != null)

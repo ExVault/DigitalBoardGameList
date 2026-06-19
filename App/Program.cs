@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Diagnostics;
+using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using DigitalBoardGameList.App;
@@ -10,6 +11,8 @@ using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
 
 CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
+
+var stopwatch = Stopwatch.StartNew();
 
 AppSettings settings;
 
@@ -69,4 +72,20 @@ var json = JsonSerializer.Serialize(publishCatalog,
 
 File.WriteAllText(settings.OutputCatalogPath, json);
 
-Console.WriteLine("Done!");
+Log.Information("Done! Time elapsed: {Elapsed}", PrettyPrintElapsed(stopwatch.Elapsed));
+
+Console.WriteLine(enrichment.MakeFailureReport());
+
+static string PrettyPrintElapsed(TimeSpan ts)
+{
+    if (ts.TotalMilliseconds < 1000)
+        return $"{(int)ts.TotalMilliseconds}ms";
+
+    if (ts.TotalSeconds < 60)
+        return $"{ts.Seconds}s";
+
+    if (ts.TotalMinutes < 60)
+        return $"{ts.Minutes}m {ts.Seconds}s";
+
+    return $"{(int)ts.TotalHours}h {ts.Minutes}m {ts.Seconds}s";
+}

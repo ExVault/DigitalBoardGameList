@@ -1,4 +1,5 @@
-﻿using DigitalBoardGameList.App.Catalog.Input;
+﻿using System.Text;
+using DigitalBoardGameList.App.Catalog.Input;
 using DigitalBoardGameList.App.Catalog.Output;
 using DigitalBoardGameList.App.Enrichment.Providers.AppStore;
 using DigitalBoardGameList.App.Enrichment.Providers.Bgg;
@@ -14,8 +15,8 @@ public class EnrichmentProcess
     private readonly GameCatalog _gameCatalog;
     private readonly PublishCatalog? _previousCatalog;
     private readonly AppSettings _settings;
-
     private readonly IGameEnricher[] _enrichers;
+    private readonly List<EnrichmentFailure> _failures = [];
 
     public EnrichmentProcess(GameCatalog gameCatalog, PublishCatalog? previousCatalog, AppSettings settings)
     {
@@ -94,6 +95,8 @@ public class EnrichmentProcess
                           "during enrichment and lack of fallback data",
                     nameof(EnrichmentProcess), currentData.Game.Name);
 
+                _failures.Add(new(currentData.Game.Name, noFallback: true));
+
                 continue;
             }
 
@@ -111,35 +114,115 @@ public class EnrichmentProcess
         return new PublishCatalog(validOutput);
     }
 
-    private static void ApplyFallbackValues(EnrichmentData enrich, GameDto previous)
+    private void ApplyFallbackValues(EnrichmentData current, GameDto previous)
     {
-        enrich.Game.Dlcs ??= previous.Dlcs;
-        enrich.Game.ImageUrl ??= previous.ImageUrl;
-        enrich.Game.Developer ??= previous.Developer;
-        enrich.Game.Publisher ??= previous.Publisher;
+        var failure = new EnrichmentFailure(current.Game.Name);
+        _failures.Add(failure);
 
-        if (enrich.Bgg.Rank == 0)
-            enrich.Bgg.Rank = previous.Bgg.Rank;
-
-        if (enrich.Bgg.Rating == 0)
-            enrich.Bgg.Rating = previous.Bgg.Rating;
-
-        if (enrich.KnownTotalDlcCount == 0)
-            enrich.KnownTotalDlcCount = previous.KnownTotalDlcCount;
+        if (current.Bgg.Rank == 0)
+        {
+            current.Bgg.Rank = previous.Bgg.Rank;
+            failure.FallbackApplied("Bgg.Rank");
+        }
+        if (current.Bgg.Rating == 0)
+        {
+            current.Bgg.Rating = previous.Bgg.Rating;
+            failure.FallbackApplied("Bgg.Rating");
+        }
+        if (current.Game.ImageUrl == null && previous.ImageUrl != null)
+        {
+            current.Game.ImageUrl = previous.ImageUrl;
+            failure.FallbackApplied("ImageUrl");
+        }
+        if (current.Game.Developer == null && previous.Developer != null)
+        {
+            current.Game.Developer = previous.Developer;
+            failure.FallbackApplied("Developer");
+        }
+        if (current.Game.Publisher == null && previous.Publisher != null)
+        {
+            current.Game.Publisher = previous.Publisher;
+            failure.FallbackApplied("Publisher");
+        }
+        if (current.Game.Dlcs == null && previous.Dlcs != null)
+        {
+            current.Game.Dlcs = previous.Dlcs;
+            failure.FallbackApplied("DLCs");
+        }
+        if (current.KnownTotalDlcCount == 0 && previous.KnownTotalDlcCount != 0)
+        {
+            current.KnownTotalDlcCount = previous.KnownTotalDlcCount;
+            failure.FallbackApplied("KnownTotalDlcCount");
+        }
 
         foreach (var (platformName, price) in previous.Prices)
         {
-            if (enrich.Platforms.TryGetValue(platformName, out var platform))
+            if (current.Platforms.TryGetValue(platformName, out var platform))
             {
-                platform.Price ??= price;
+                if (platform.Price == null)
+                {
+                    platform.Price = price;
+                    failure.FallbackApplied($"{platformName}.Price");
+                }
             }
         }
         foreach (var (platformName, lastUpdate) in previous.LastUpdates)
         {
-            if (enrich.Platforms.TryGetValue(platformName, out var platform))
+            if (current.Platforms.TryGetValue(platformName, out var platform))
             {
-                platform.LastUpdate ??= lastUpdate;
+                if (platform.LastUpdate == null)
+                {
+                    platform.LastUpdate = lastUpdate;
+                    failure.FallbackApplied($"{platformName}.LastUpdate");
+                }
             }
+        }
+    }
+
+    public string MakeFailureReport()
+    {
+        if (_failures.Count == 0)
+            return string.Empty;
+
+        var sb = new StringBuilder();
+
+        sb.AppendLine($"Games failed to update: {_failures.Count}");
+
+        for (var i = 0; i < _failures.Count; i++)
+        {
+            sb.AppendLine($"{i + 1}. {_failures[i]}");
+        }
+
+        return sb.ToString();
+    }
+
+    private class EnrichmentFailure
+    {
+        private readonly string _gameName;
+        private readonly bool _noFallback;
+        private readonly List<string> _appliedFallbacks;
+
+        public EnrichmentFailure(string gameName, bool noFallback = false)
+        {
+            _gameName = gameName;
+            _noFallback = noFallback;
+            _appliedFallbacks = [];
+        }
+
+        public void FallbackApplied(string propertyName)
+        {
+            _appliedFallbacks.Add(propertyName);
+        }
+
+        public override string ToString()
+        {
+            if (_noFallback)
+                return $"{_gameName}: Removed completely due to lack of fallback data";
+            
+            if (_appliedFallbacks.Count == 0)  // should never happen
+                return $"{_gameName}: Error marked, but no fallback values were applied";
+            
+            return $"{_gameName}: {string.Join(", ", _appliedFallbacks)}";
         }
     }
 }
