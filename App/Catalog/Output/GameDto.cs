@@ -18,12 +18,13 @@ public class GameDto
     public string? Developer { get; init; }
     public string? Publisher { get; init; }
     public int KnownTotalDlcCount { get; init; }
-    
+    public bool? StandaloneGameAsDlc { get; init; }
+
     [JsonConstructor]
     public GameDto()
     {
     }
-    
+
     public GameDto(EnrichmentData enrichedData)
     {
         Name = enrichedData.Game.Name;
@@ -33,6 +34,7 @@ public class GameDto
         Developer = enrichedData.Game.Developer;
         Publisher = enrichedData.Game.Publisher;
         KnownTotalDlcCount = enrichedData.KnownTotalDlcCount;
+        StandaloneGameAsDlc = enrichedData.Game.StandaloneGameAsDlc;
 
         foreach (var (platform, data) in enrichedData.Platforms)
         {

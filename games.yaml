@@ -92,6 +92,12 @@
     Steam: 1689500
     Xbox: dune-imperium/9mvp2r9302vp
 
+- Name: "Dune: Imperium - Uprising"
+  BggId: 397598
+  PullDataFromId: 316554
+  StandaloneGameAsDlc: true
+  ImageUrl: https://cf.geekdo-images.com/UVUkjMV_Q2paVUIUP30Vvw__itemrep@2x/img/R1DfoFAXuuOgg8vDr1n7_ovrscg=/fit-in/492x600/filters:strip_icc()/pic7664424.jpg
+
 - Name: The Isle of Cats
   BggId: 281259
   PlatformIds:
@@ -376,6 +382,12 @@
     Playstation: UP4744-PPSA08115_00-GLOOMHAVENGOLDB1
     Xbox: gloomhaven/9NCRD23Z3L08
     Switch: gloomhaven
+
+- Name: "Gloomhaven: Jaws of the Lion"
+  BggId: 291457
+  PullDataFromId: 174430
+  StandaloneGameAsDlc: true
+  ImageUrl: https://cf.geekdo-images.com/_HhIdavYW-hid20Iq3hhmg__itemrep@2x/img/SnJ_s7pxZkOUQNXd9BAUiYEnLyE=/fit-in/492x600/filters:strip_icc()/pic5055631.jpg
 
 - Name: Frosthaven
   BggId: 295770

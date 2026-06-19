@@ -154,6 +154,12 @@ function makeNameTd(game) {
     a.textContent = game.Name;
     a.target = "_blank";
     td.appendChild(a);
+    if (game.StandaloneGameAsDlc) {
+        const postfix = document.createElement("span");
+        postfix.className = "name-postfix";
+        postfix.textContent = " (as DLC)";
+        td.appendChild(postfix);
+    }
     return td;
 }
 

@@ -37,30 +37,7 @@ public class EnrichmentProcess
 
     public async Task<PublishCatalog> RunAsync()
     {
-        var gameCount = _gameCatalog.Games.Count;
-        var enrichContexts = new List<EnrichmentContext>(gameCount);
-
-        if (_previousCatalog != null)
-        {
-            var previousCatalogDict = _previousCatalog.Games.ToDictionary(game => game.Bgg.Id);
-
-            foreach (var game in _gameCatalog.Games)
-            {
-                var previous = previousCatalogDict.GetValueOrDefault(game.BggId);
-
-                if (previous != null && _settings.ProcessOnlyNewGames)
-                    continue;
-
-                enrichContexts.Add(new EnrichmentContext(new EnrichmentData(game), previous, _settings));
-            }
-        }
-        else
-        {
-            foreach (var game in _gameCatalog.Games)
-            {
-                enrichContexts.Add(new EnrichmentContext(new EnrichmentData(game), null, _settings));
-            }
-        }
+        var enrichContexts = CreateContextsFromCatalogs();
 
         if (enrichContexts.Count == 0)
         {
@@ -77,7 +54,63 @@ public class EnrichmentProcess
 
         await Task.WhenAll(_enrichers.Select(enricher => enricher.EnrichAllAsync(enrichContexts)));
 
-        var validOutput = new List<GameDto>();
+        UpdateStandaloneDlcGames(enrichContexts);
+
+        return new PublishCatalog(ToValidDto(enrichContexts));
+    }
+
+    private List<EnrichmentContext> CreateContextsFromCatalogs()
+    {
+        var result = new List<EnrichmentContext>(_gameCatalog.Games.Count);
+
+        if (_previousCatalog != null)
+        {
+            var previousCatalogDict = _previousCatalog.Games.ToDictionary(game => game.Bgg.Id);
+
+            foreach (var game in _gameCatalog.Games)
+            {
+                var previous = previousCatalogDict.GetValueOrDefault(game.BggId);
+
+                if (previous != null && _settings.ProcessOnlyNewGames)
+                    continue;
+
+                result.Add(new EnrichmentContext(new EnrichmentData(game), previous, _settings));
+            }
+        }
+        else
+        {
+            foreach (var game in _gameCatalog.Games)
+            {
+                result.Add(new EnrichmentContext(new EnrichmentData(game), null, _settings));
+            }
+        }
+
+        return result;
+    }
+
+    private void UpdateStandaloneDlcGames(List<EnrichmentContext> enrichContexts)
+    {
+        foreach (var context in enrichContexts)
+        {
+            if (context.CurrentData.Game.PullDataFromId == null)
+                continue;
+
+            var source = enrichContexts.Find(c => c.CurrentData.Bgg.Id == context.CurrentData.Game.PullDataFromId);
+            if (source == null)
+            {
+                Log.Error("[{Type}] {GameName} cannot find game {SourceId} to pull data from",
+                    nameof(EnrichmentProcess), context.CurrentData.Game.Name, context.CurrentData.Game.PullDataFromId);
+            }
+            else
+            {
+                context.CurrentData.PullDataFrom(source.CurrentData);
+            }
+        }
+    }
+
+    private List<GameDto> ToValidDto(List<EnrichmentContext> enrichContexts)
+    {
+        var result = new List<GameDto>();
 
         foreach (var context in enrichContexts)
         {
@@ -85,7 +118,7 @@ public class EnrichmentProcess
 
             if (!currentData.HasError)
             {
-                validOutput.Add(currentData.ToDto());
+                result.Add(currentData.ToDto());
                 continue;
             }
 
@@ -102,16 +135,16 @@ public class EnrichmentProcess
 
             ApplyFallbackValues(currentData, context.PreviousData);
 
-            validOutput.Add(currentData.ToDto());
+            result.Add(currentData.ToDto());
         }
 
         if (_settings.ProcessOnlyNewGames && _previousCatalog != null)
         {
-            var validIds = validOutput.Select(game => game.Bgg.Id).ToHashSet();
-            validOutput.AddRange(_previousCatalog.Games.Where(previous => !validIds.Contains(previous.Bgg.Id)));
+            var validIds = result.Select(game => game.Bgg.Id).ToHashSet();
+            result.AddRange(_previousCatalog.Games.Where(previous => !validIds.Contains(previous.Bgg.Id)));
         }
 
-        return new PublishCatalog(validOutput);
+        return result;
     }
 
     private void ApplyFallbackValues(EnrichmentData current, GameDto previous)
@@ -218,10 +251,10 @@ public class EnrichmentProcess
         {
             if (_noFallback)
                 return $"{_gameName}: Removed completely due to lack of fallback data";
-            
-            if (_appliedFallbacks.Count == 0)  // should never happen
+
+            if (_appliedFallbacks.Count == 0) // should never happen
                 return $"{_gameName}: Error marked, but no fallback values were applied";
-            
+
             return $"{_gameName}: {string.Join(", ", _appliedFallbacks)}";
         }
     }

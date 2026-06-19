@@ -120,6 +120,72 @@
       "KnownTotalDlcCount": 3
     },
     {
+      "Name": "Dune: Imperium - Uprising",
+      "Bgg": {
+        "Id": 397598,
+        "Url": "https://boardgamegeek.com/boardgame/397598",
+        "Rank": 5,
+        "Rating": 8.7
+      },
+      "Urls": [
+        {
+          "Platform": "GooglePlay",
+          "Url": "https://play.google.com/store/apps/details?id=com.direwolfdigital.dune"
+        },
+        {
+          "Platform": "AppStore",
+          "Url": "https://apps.apple.com/app/id1575414319"
+        },
+        {
+          "Platform": "Steam",
+          "Url": "https://store.steampowered.com/app/1689500"
+        },
+        {
+          "Platform": "Xbox",
+          "Url": "https://www.xbox.com/games/store/dune-imperium/9mvp2r9302vp"
+        }
+      ],
+      "Prices": [
+        {
+          "Platform": "GooglePlay",
+          "Price": {
+            "Value": 10.99
+          }
+        },
+        {
+          "Platform": "AppStore",
+          "Price": {
+            "Value": 10.99
+          }
+        },
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 22.99
+          }
+        }
+      ],
+      "LastUpdates": [
+        {
+          "Platform": "GooglePlay",
+          "LastUpdate": "2026-06-18"
+        },
+        {
+          "Platform": "AppStore",
+          "LastUpdate": "2026-06-18"
+        },
+        {
+          "Platform": "Steam",
+          "LastUpdate": "2026-06-17"
+        }
+      ],
+      "ImageUrl": "https://cf.geekdo-images.com/UVUkjMV_Q2paVUIUP30Vvw__itemrep@2x/img/R1DfoFAXuuOgg8vDr1n7_ovrscg=/fit-in/492x600/filters:strip_icc()/pic7664424.jpg",
+      "Developer": "Dire Wolf",
+      "Publisher": "Dire Wolf",
+      "KnownTotalDlcCount": 3,
+      "StandaloneGameAsDlc": true
+    },
+    {
       "Name": "Dune: Imperium",
       "Bgg": {
         "Id": 316554,
@@ -334,6 +400,60 @@
       "Developer": "Handelabra Games",
       "Publisher": "Handelabra Games",
       "KnownTotalDlcCount": 9
+    },
+    {
+      "Name": "Gloomhaven: Jaws of the Lion",
+      "Bgg": {
+        "Id": 291457,
+        "Url": "https://boardgamegeek.com/boardgame/291457",
+        "Rank": 12,
+        "Rating": 8.4
+      },
+      "Urls": [
+        {
+          "Platform": "Steam",
+          "Url": "https://store.steampowered.com/app/780290"
+        },
+        {
+          "Platform": "GOG",
+          "Url": "https://www.gog.com/game/gloomhaven"
+        },
+        {
+          "Platform": "EGS",
+          "Url": "https://store.epicgames.com/p/gloomhaven-92f741"
+        },
+        {
+          "Platform": "Playstation",
+          "Url": "https://store.playstation.com/en-us/product/UP4744-PPSA08115_00-GLOOMHAVENGOLDB1"
+        },
+        {
+          "Platform": "Xbox",
+          "Url": "https://www.xbox.com/games/store/gloomhaven/9NCRD23Z3L08"
+        },
+        {
+          "Platform": "Switch",
+          "Url": "https://www.nintendo.com/us/store/products/gloomhaven-switch"
+        }
+      ],
+      "Prices": [
+        {
+          "Platform": "Steam",
+          "Price": {
+            "Value": 34.99
+          }
+        }
+      ],
+      "LastUpdates": [
+        {
+          "Platform": "Steam",
+          "LastUpdate": "2025-10-07"
+        }
+      ],
+      "ImageUrl": "https://cf.geekdo-images.com/_HhIdavYW-hid20Iq3hhmg__itemrep@2x/img/SnJ_s7pxZkOUQNXd9BAUiYEnLyE=/fit-in/492x600/filters:strip_icc()/pic5055631.jpg",
+      "Developer": "Flaming Fowl Studios",
+      "Publisher": "Twin Sails Interactive",
+      "KnownTotalDlcCount": 3,
+      "StandaloneGameAsDlc": true
     },
     {
       "Name": "Gaia Project",
@@ -8050,5 +8170,5 @@
       "KnownTotalDlcCount": 2
     }
   ],
-  "PublishDate": "2026-06-19T17:57:55.9671643+00:00"
+  "PublishDate": "2026-06-19T20:00:41.076506+00:00"
 }

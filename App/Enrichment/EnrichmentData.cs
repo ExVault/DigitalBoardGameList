@@ -8,7 +8,7 @@ public class EnrichmentData
 {
     public GameEntry Game { get; }
     public BggData Bgg { get; }
-    public Dictionary<string, PlatformData> Platforms { get; } = new();
+    public Dictionary<string, PlatformData> Platforms { get; private set; } = new();
 
     public bool HasError { get; private set; }
     public void MarkError() => HasError = true;
@@ -36,5 +36,22 @@ public class EnrichmentData
     public GameDto ToDto()
     {
         return new GameDto(this);
+    }
+
+    public void PullDataFrom(EnrichmentData other)
+    {
+        Platforms = other.Platforms;
+        HasError = other.HasError;
+        KnownTotalDlcCount = other.KnownTotalDlcCount;
+
+        Game.ImageUrl ??= other.Game.ImageUrl;
+        Game.Developer ??= other.Game.Developer;
+        Game.Publisher ??= other.Game.Publisher;
+
+        // If a game is itself a DLC - do not list DLCs for a DLC...
+        if (!Game.StandaloneGameAsDlc.GetValueOrDefault())
+        {
+            Game.Dlcs ??= other.Game.Dlcs;
+        }
     }
 }
