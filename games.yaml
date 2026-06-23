@@ -1193,6 +1193,13 @@
     GooglePlay: com.smugapps.islarica
   ImageUrl: https://play-lh.googleusercontent.com/MfzFxBgKe-hKIWcb4C6KjtdaixUKJR7F-lDN5qqYdkBG2iR1ZrF6ev50B4tq6up0uj7r-M-JRhNS_hhIXcmp=w480-h960
 
+- Name: Elder Sign
+  BggId: 100423
+  PlatformIds:
+    GooglePlay: com.fantasyflightgames.ESAndroid
+    AppStore: 475404533
+    Steam: 257670
+
 # Not released yet:
 # https://store.steampowered.com/app/4089610/Eldritch_Horror_Digital_Edition/
 # https://store.steampowered.com/app/3387300/Lost_Ruins_of_Arnak/
