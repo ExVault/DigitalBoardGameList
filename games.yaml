@@ -201,6 +201,11 @@
     GOG: concordia_digital_edition
     Switch: concordia-digital-edition
 
+- Name: Concordia Venus
+  BggId: 256916
+  PullDataFromId: 124361
+  StandaloneGameAsDlc: true
+
 - Name: Stone Age
   BggId: 34635
   PlatformIds:
@@ -435,6 +440,11 @@
     GooglePlay: com.handelabra.AeonsEnd
     AppStore: 1476090287
     Steam: 1063580
+
+- Name: "Aeon's End: The New Age"
+  BggId: 270633
+  PullDataFromId: 191189
+  StandaloneGameAsDlc: true
 
 - Name: Sentinels of Earth-Prime
   BggId: 220609
@@ -796,6 +806,39 @@
     AppStore: 1396367189
     Steam: 1569700
 
+- Name: Star Realms
+  BggId: 147020
+  PlatformIds:
+    GooglePlay: com.starrealms.starrealmsapp
+    AppStore: 893447125
+    Steam: 438140
+
+- Name: Cthulhu Realms
+  BggId: 179303
+  PlatformIds:
+    GooglePlay: com.whitewizardgames.cthulhurealms
+    AppStore: 1035256452
+    Steam: 485000
+
+- Name: Epic Card Game
+  BggId: 175621
+  PlatformIds:
+    GooglePlay: com.epiccardgame.epicapp
+    AppStore: 1166392881
+    Steam: 590670
+
+- Name: Caution Signs
+  BggId: 407805
+  PlatformIds:
+    GooglePlay: com.wisewizardgames.cautionsigns
+    AppStore: 6483942383
+
+- Name: Sherlock Solitaire
+  BggId: 411013
+  PlatformIds:
+    GooglePlay: com.wisewizardgames.sherlocksolitaire
+    AppStore: 6480482859
+
 - Name: Through the Ages
   BggId: 182028
   PlatformIds:
@@ -829,6 +872,12 @@
   PlatformIds:
     GooglePlay: com.scatterbrainstudios.maracaibo
     AppStore: 1518834089
+
+- Name: My City
+  BggId: 295486
+  PlatformIds:
+    GooglePlay: com.spiralburst.mycity
+    AppStore: 6475314484
 
 - Name: Bullfrogs
   BggId: 149853
@@ -969,3 +1018,178 @@
     GooglePlay: com.marmalade.taboo
     AppStore: 1563932741
 
+- Name: Kingdomino
+  BggId: 204583
+  PlatformIds:
+    GooglePlay: com.meeplecorp.kingdomino
+    AppStore: 6468810215
+    Steam: 3029180
+
+- Name: Castles of Mad King Ludwig
+  BggId: 155426
+  PlatformIds:
+    GooglePlay: com.mobilecastles.castles
+    AppStore: 1100292960
+
+- Name: Suburbia
+  BggId: 123260
+  PlatformIds:
+    GooglePlay: com.suburbiagame.suburbia
+    AppStore: 681966300
+
+- Name: Silver
+  BggId: 278553
+  PlatformIds:
+    GooglePlay: com.beziergames.silver
+    AppStore: 1473134907
+
+- Name: Scram!
+  BggId: 385799
+  PlatformIds:
+    GooglePlay: com.beziergames.scram
+    AppStore: 6447473514
+
+- Name: Maglev Metro
+  BggId: 301257
+  PlatformIds:
+    GooglePlay: com.BezierGames.MaglevMetro
+    AppStore: 1616040081
+
+- Name: Between Two Castles of Mad King Ludwig
+  BggId: 258036
+  PlatformIds:
+    Steam: 1158500
+
+- Name: Watergate
+  BggId: 274364
+  PlatformIds:
+    GooglePlay: nl.eerko.watergate
+    AppStore: 6476921577
+
+- Name: Carnegie
+  BggId: 310873
+  PlatformIds:
+    GooglePlay: com.ycyclopgames.Carnegie
+    AppStore: 6741925650
+    Steam: 3297500
+
+- Name: "Teotihuacan: City of Gods"
+  BggId: 229853
+  PlatformIds:
+    GooglePlay: com.ycyclopgames.Teotihuacan
+    AppStore: 6743720874
+    Steam: 4000450
+
+- Name: Capital Lux 2
+  BggId: 299607
+  PlatformIds:
+    GooglePlay: com.ycyclopGames.CapitalLux2
+    AppStore: 6446244231
+
+- Name: Dust in the Wings
+  BggId: 262275
+  PlatformIds:
+    GooglePlay: com.ycyclopgames.dust
+    AppStore: 1511314878
+
+- Name: Gugong
+  BggId: 250458
+  PlatformIds:
+    AppStore: 6476454775
+    Steam: 2786820
+
+- Name: Reef Encounter
+  BggId: 12962
+  PlatformIds:
+    GooglePlay: com.ycyclop.ReefEncounter
+    AppStore: 1635048241
+
+- Name: "Carson City: The Card Game"
+  BggId: 248117
+  PlatformIds:
+    AppStore: 6448691916
+
+- Name: What's Up
+  BggId: 201054
+  PlatformIds:
+    AppStore: 1260388782
+
+- Name: Fowl Play!
+  BggId: 24051
+  PlatformIds:
+    AppStore: 1150874856
+
+- Name: Atacama
+  BggId: 144587
+  PlatformIds:
+    AppStore: 1130784005
+
+- Name: Gipsy King
+  BggId: 32382
+  PlatformIds:
+    AppStore: 367233816
+
+- Name: King of Tokyo
+  BggId: 70323
+  PlatformIds:
+    Steam: 3232870
+    Playstation: EP4295-PPSA27029_00-KINGOFTOKYOPS5WW
+    Xbox: king-of-tokyo/9NM9K9W1ZCJW/0010
+    Switch: king-of-tokyo-richard-garfield
+
+- Name: Samurai
+  BggId: 3
+  PlatformIds:
+    GooglePlay: com.SyntheticMind.Samurai
+    AppStore: 6744621255
+    Steam: 3959710
+
+- Name: Keep the Heroes Out
+  BggId: 333255
+  PlatformIds:
+    Steam: 2592340
+    Switch: keep-the-heroes-out
+
+- Name: Rolling Realms
+  BggId: 305682
+  PlatformIds:
+    Steam: 2182310
+    AppStore: 6670240315
+
+- Name: "Nemesis: Lockdown"
+  BggId: 310100
+  PlatformIds:
+    Steam: 1915550
+
+- Name: Catan
+  BggId: 13
+  Developer: Endava & SuperNimbus
+  PlatformIds:
+    GooglePlay: com.usm.catanuniverse
+    AppStore: 1220346113
+    Steam: 544730
+    Xbox: catan-console-edition/9ppmq5r4f6wb
+    Playstation: UP3004-PPSA07227_00-CATANBOARDGAMEPS
+    Switch: catan-console-edition
+
+- Name: "The Lord of the Rings: Adventure Card Game"
+  BggId: 77423
+  Developer: Twin Sails Interactive # Developer is missing on Steam for some reason
+  PlatformIds:
+    Steam: 509580
+    Playstation: UP4744-CUSA15785_00-LOTRLCG000000000
+    Xbox: the-lord-of-the-rings-adventure-card-game-definitive-edition/9ncp1745jf7b
+    Switch: the-lord-of-the-rings-adventure-card-game-definitive-edition
+
+- Name: Puerto Rico
+  BggId: 3076
+  Developer: SmugApps
+  PlatformIds:
+    GooglePlay: com.smugapps.islarica
+  ImageUrl: https://play-lh.googleusercontent.com/MfzFxBgKe-hKIWcb4C6KjtdaixUKJR7F-lDN5qqYdkBG2iR1ZrF6ev50B4tq6up0uj7r-M-JRhNS_hhIXcmp=w480-h960
+
+# Not released yet:
+# https://store.steampowered.com/app/4089610/Eldritch_Horror_Digital_Edition/
+# https://store.steampowered.com/app/3387300/Lost_Ruins_of_Arnak/
+# https://store.steampowered.com/app/2182320/Underwater_Cities/
+# https://store.steampowered.com/app/4279520/Flame__Forge/
