@@ -752,6 +752,11 @@
     Xbox: wingspan/9mt2kf9fkzm5
     Switch: wingspan
 
+- Name: Wingspan Asia
+  BggId: 366161
+  PullDataFromId: 266192
+  StandaloneGameAsDlc: true
+
 - Name: Calico
   BggId: 283155
   PlatformIds:
